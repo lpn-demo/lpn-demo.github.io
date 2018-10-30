@@ -1,0 +1,365 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	text-transform: uppercase
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.logo
+	display: inline-block
+	width: 189px
+	height: 33px
+	margin-top: 54px
+	background: url(../img/logo.png) no-repeat
+.store-button
+	text-align: center
+	button
+		position: relative
+		width: 310px
+		height: 77px 	
+		border-radius: 50px
+		font-size: 14px
+		text-align: left
+		line-height: 1
+		font-weight: lighter
+		text-transform: uppercase
+		color: #fff
+		background: #5e42b0
+		border: none
+		outline: none
+		margin-right: 25px
+		margin-left: 25px
+		padding-left: 120px
+		b
+			font-weight: 600
+		.appstore
+			position: absolute
+			left: 45px
+			top: 20px
+			width: 33px
+			height: 37px
+			background: url(../img/apple.png) no-repeat
+		.googleplay
+			position: absolute
+			left: 60px
+			top: 20px
+			width: 36px
+			height: 39px
+			background: url(../img/google.png) no-repeat
+
+h1
+	font-size: 90px
+	font-weight: bold
+	color: #e7e7e7
+h2
+	font-size: 36px
+	font-weight: bold
+	color: #c1c1c1			
+p
+	text-transform: none
+	color: #000
+hr
+	position: absolute
+	width: 22px
+	height: 5px
+	border: none 
+	border-radius: 3px
+	margin: 0
+
+//site-header
+header
+	background: url(../img/fon-h.png) no-repeat center top,  #0a0e34
+	min-height: 300px
+	background-size: cover
+	.text
+		color: #fff
+		margin-top: 60px
+		float: right
+		font-size: 14px
+		font-weight: lighter
+	.caption
+		position: relative
+		width: 100%
+		height: 317px
+		margin: 210px auto
+		margin-bottom: 0
+		background: url(../img/caption-h.png) no-repeat
+		background-size: 100%
+	.sport-wrap
+		position: relative
+		.sport
+			position: absolute
+			color: #9071ea
+			font-size: 14px
+			font-weight: lighter
+			right: 15px
+			top: -50px
+			span
+				margin-left: 50px
+	.store-button
+		margin-top: 150px
+		margin-bottom: 110px
+		
+//site-header END
+
+//site-content 
+
+.athlets_players
+	overflow-x: hidden
+	.text
+		position: relative
+	hr
+		background-color:  #5e42b0
+		top: 24px
+	h1
+		margin-top: 100px
+		margin-bottom: 80px
+	h2
+		position: relative
+		margin-bottom: 15px
+	p
+		font-size: 20px
+	sup
+		display: inline-block
+		font-size: 18px
+		color: #000
+	.block1
+		.text
+			hr
+				top: 203px
+	//Athlets
+	.athlets
+		position: relative
+		h2
+			margin-top: 60px
+		.football
+			position: absolute
+			top: 33px
+			right: 50px
+			background: url("../img/athlete.png") no-repeat
+			width: 605px
+			height: 976px
+			z-index: 1
+		.block1
+			padding-bottom: 45px
+			background-color: #FFF
+		.block2
+			height: 256px
+			background-color: #f6f4fa
+		.block3
+			height: 297px
+			background-color: #5e42b0
+			p
+				color: #fff
+			hr
+				background-color: #fff
+
+	//Athlets END
+
+	//Players
+	.players
+		position: relative
+		h2
+			margin-top: 60px
+		.basketball
+			position: absolute
+			width: 991px
+			height: 815px
+			top: -30px
+			left: -195px
+			background: url(../img/players.png) no-repeat
+		.block
+			padding-left: 130px
+		.block1
+			padding-bottom: 55px
+			background-color: #FFF
+		.block2
+			height: 244px
+			background-color: #f5f6f7
+		.block3
+			height: 268px
+			background-color: #0a0e34
+			h2
+				margin-top: 90px
+			p
+				color: #fff
+			sup
+				color: #5e42b0
+			hr
+				background-color: #fff
+	//Players END
+
+
+.wrapper
+	h1
+		margin-top: 255px
+	p
+		font-size: 24px
+		line-height: 1.2
+	.im
+		padding: 0
+	img
+		float: right
+	.square
+		position: absolute
+		top: 211px
+		right: 0
+		left: 0
+		margin: 0 auto
+		width: 168px 
+		height: 155px
+		background: #5e42b0
+		color: #f5f6f7
+		text-align: center
+		line-height: 140px
+		font-size: 24px
+		font-weight: bold
+		z-index: 1
+		hr
+			position: relative
+			top: -55px
+			background: #fff
+			opacity: 0.5
+			margin: 0 auto
+	.imag
+		width: 100%
+		height: 730px
+	.text
+		position: relative
+		hr
+			margin-top: 80px
+			background: #5e42b0
+
+	.be_active
+		position: relative	
+		p
+			width: 45%
+		.text
+			padding-left: 115px
+			h1
+				margin-bottom: 110px
+		.imag
+			background: url("../img/be-active.jpg") no-repeat
+			background-position: center
+			background-size: cover
+	.find_contact
+		position: relative
+		p
+			width: 55%
+		img
+			float: left
+		.text
+			float: right
+			padding-right: 115px
+			h1
+				margin-bottom: 70px
+			hr
+				margin-top: 100px
+		.imag
+			background: url("../img/find-contact.jpg") no-repeat
+			background-position: center
+			background-size: cover
+	.work_it
+		position: relative
+		p
+			width: 75%
+		.text
+			padding-left: 115px
+			h1
+				margin-bottom: 100px
+		.imag
+			background: url("../img/work-it.jpg") no-repeat
+			background-position: center
+			background-size: cover
+	//site-content END
+	//site-footer
+.site-footer
+	footer
+		background: url(../img/fon-f.png) no-repeat center top,  #0a0e34
+		min-height: 700px
+		background-size: cover
+	.footer-t
+		.caption
+			position: relative
+			width: 100%
+			height: 314px
+			margin-top: 140px
+			margin: 140px auto
+			margin-bottom: 0
+			background: url(../img/caption-f.png) no-repeat center
+			background-size: 100%
+		.store-button
+			margin-top: 66px
+			margin-bottom: 195px
+	.footer-b
+		height: 171px
+		background: rgba(#0a0e34, 0.6)
+		.logo
+			margin-top: 70px
+		.social
+			text-align: center
+			margin-top: 70px
+			.fa
+				font-size: 30px
+				color: #fff
+				padding-left: 20px
+				padding-right: 20px
+		span
+			float: right
+			margin-top: 75px
+			display: inline-block
+			text-transform: none
+			float: right
+			font-size: 20px
+			color: #fff
+
+			//site-footer END
+
+
+@import "media" 

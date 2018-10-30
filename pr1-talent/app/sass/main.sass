@@ -1,0 +1,451 @@
+@import "vars"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.light
+	color: #fff
+	h1, h2, h3, h4, h5, h6
+		&:after
+			border-bottom: 2px solid #fff
+
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-family: $sub-font1
+	font-weight: 400
+	&:after
+		content: ''
+		display: block
+		border-bottom: 2px solid $text
+		width: 86px
+		margin: 0 auto
+		margin-top: 70px
+h1
+	font-size: 48px
+h2
+	font-size: 30px
+h3
+	font-size: 24px
+p
+	font-size: 22px
+	font-weight: 300
+	margin: 0
+
+header
+	position: relative
+	background: url('../img/bg.png') no-repeat center
+	background-size: cover
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		background: linear-gradient(to left, #bb4343 0%, #efab4b 100%) 
+		opacity: .5
+		transition: all .3s
+		&.active
+			position: fixed
+			opacity: .9
+			z-index: 1
+			
+	.hamburger
+		position: absolute
+		top: 60px
+		left: 50px
+		outline: none
+		z-index: 2	
+	.menu
+		display: none
+		position: absolute
+		padding: 0
+		text-align: center
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 2
+		li
+			display: block
+			font-family: $sub-font2
+			font-size: 18px
+			font-weight: 400
+			text-transform: uppercase
+			cursor: pointer
+			color: #fff
+			margin-bottom: 15px
+			&.active, &:hover
+				font-family: $sub-font1
+
+
+
+	.row
+		height: 100vh
+		min-height: 700px
+	.txt
+		text-align: center
+		h1
+			&:after
+				margin-top: 50px
+		p
+			font-weight: 400
+			letter-spacing: 1.1px
+			margin-top: 40px
+	.scroll
+		position: absolute
+		bottom: 61px
+		left: 50%
+		transform: translateX(-50%)
+
+.main
+	.section_btn, .video
+		position: relative
+		height: 500px
+		.btn
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-family: $default-font
+			width: 430px
+			height: 100px
+			border: 3px solid #fff
+			color: #fff
+			font-size: 30px
+			font-weight: 700
+			letter-spacing: 1.2px
+			background: none
+			cursor: pointer
+	.section_btn1
+		background: url('../img/bg2.png') no-repeat center
+		background-size: cover
+	.section_btn2
+		background: url('../img/bg3.png') no-repeat center
+		background-size: cover
+	.section_btn3
+		background: url('../img/bg4.png') no-repeat center
+		background-size: cover
+	.txt
+		margin-top: 120px
+		text-align: center
+		h2
+			&:after
+				margin-bottom: 70px
+
+	.section1
+		.txt
+			margin-bottom: 120px
+
+	.section2
+		.btn
+			position: relative
+			width: 370px
+			height: 60px
+			border: 3px solid #222222
+			font-size: 24px
+			font-weight: 700
+			letter-spacing: 0.96px
+			background: none
+			margin: 80px auto
+			left: 50%
+			transform: translateX(-50%)
+		.filter
+			margin-top: 10px
+			margin-bottom: 60px
+			padding: 0
+			text-align: center
+			li
+				display: inline-block
+				font-family: $sub-font2
+				font-size: 18px
+				font-weight: 400
+				text-transform: uppercase
+				cursor: pointer
+				margin-left: 35px
+				&:first-child
+					margin-left: 0
+				&.active
+					font-family: $sub-font1
+		
+
+		.filtr-container
+			margin: 0
+			.filtr-item
+				.imag
+					margin-top: 20px
+					position: relative
+					&:hover .hover
+						opacity: 1
+					.hover
+						opacity: 0
+						position: absolute
+						width: 100%
+						height: 100%
+						background: rgba(#000, .75)
+						border: 8px solid #000000
+						transition: all .3s
+						a
+							position: absolute
+							width: 100%
+							height: 100%
+							z-index: 2
+						h3
+							position: relative
+							top: 50%
+							transform: translateY(-50%)
+							text-align: center
+							font-size: 18px
+							font-weight: 400
+							z-index: 1
+							span
+								display: block
+								font-size: 24px
+								font-weight: 400
+								font-family: $default-font
+							&:after
+								content: ''
+								position: absolute
+								left: 50%
+								transform: translateX(-50%)
+								display: block
+								border-bottom: 2px solid $accent
+								width: 48px
+								margin-top: 30px
+
+	.section3
+		background-color: #f4f4f4
+		.clients
+			text-align: center
+			margin-top: 30px
+			padding-bottom: 140px
+			img
+				margin: 0 auto
+
+
+	.section4
+		.persons
+			margin-top: 70px
+			margin-bottom: 80px
+		.person
+			position: relative
+			transition: all .3s
+			&:hover
+				background: $text
+			&:hover .hover
+				opacity: 1
+			.hover
+				opacity: 0
+				position: absolute
+				width: 100%
+				height: 100%
+				border: 4px solid #000000
+				transition: all .3s
+				a
+					position: absolute
+					top: 16px
+					right: 18px
+					z-index: 2
+				h3
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: 30px
+					text-align: center
+					font-weight: 400
+					z-index: 0
+					span
+						display: block
+						font-size: 18px
+						font-weight: 400
+						font-family: $default-font
+						letter-spacing: 0.45px
+					&:after
+						display: none
+
+		.link
+			border: 1px solid #222222
+			text-align: center
+			height: 100%
+			h3
+				position: relative
+				margin-top: 50px
+				&:after
+					display: block
+					margin-top: 45px
+			.btn
+				width: 183px
+				height: 60px
+				border: 3px solid #222222
+				font-size: 24px
+				font-weight: 700
+				letter-spacing: 0.96px
+				margin-top: 40px
+				background: none
+				cursor: pointer
+
+	.video
+		.jquery-background-video-pauseplay
+			width: 100%
+			height: 100%
+		.jquery-background-video-pauseplay.play
+			width: 70px
+			height: 70px
+			background: url(../img/play.png) no-repeat center 
+
+	.section5
+		.carousel
+			margin-top: 100px
+			margin-bottom: 60px
+			.item
+				position: relative
+				text-align: center
+				padding-top: 151px
+				h3
+					font-family: $default-font
+					letter-spacing: 0.24px
+					margin-bottom: 30px
+					&:after
+						display: none
+				p
+					font-size: 16px
+					font-weight: 400
+					line-height: 1.7
+				.img-icon
+					position: relative
+					margin-bottom: 40px
+					img
+						position: absolute
+						bottom: 0
+						left: 50%
+						transform: translateX(-50%)
+						width: auto
+						margin: 0 auto
+			.owl-dots
+				margin-top: 75px
+				.owl-dot span
+					width: 12px
+					height: 12px
+					background-color: #d5d5d5
+				.owl-dot.active span, .owl-dot:hover span
+					background: $accent
+
+	.section6
+		.txt
+			margin-bottom: 110px
+
+	.section7
+		.container-fluid
+			padding: 0
+		.adress
+			position: relative
+			width: 100%
+			height: 100%
+			background-color: #f2f2f2
+			.text
+				float: right
+				padding-right: 169px
+				padding-top: 120px
+				padding-bottom: 120px
+				p
+					padding-top: 40px
+					font-size: 22px
+					font-weight: 300
+					font-style: italic
+					span
+						display: block
+				h3
+					&:after
+						display: none
+				.links
+					margin-top: 30px
+					a
+						margin-right: 30px
+					.fab
+						font-size: 18px
+						color: $text
+
+		.form
+			position: relative
+			padding-top: 100px
+			padding-left: 100px
+			width: 100%
+			height: 100%
+			background-color: #e4e4e4
+			form
+				display: inline-block
+			input
+				border: none
+				background: none
+				padding: 0
+				border-bottom: 2px solid #afafaf
+				color: #676767
+				font-size: 18px
+				font-weight: 400
+				font-style: italic
+				padding-left: 28px
+			.name
+				margin-right: 60px
+			.name, .email
+				display: inline-block
+			.massage
+				margin-top: 110px
+				input
+					width: 100%
+
+			.btn
+				display: block
+				float: right
+				margin-top: 40px
+				width: 183px
+				height: 60px
+				border: 3px solid $text
+				font-size: 24px
+				font-weight: 700
+				letter-spacing: 0.96px
+				cursor: pointer
+
+footer
+	text-align: center
+	background: $text
+	padding: 100px 0
+	p
+		color: #e4e4e4
+		font-size: 16px
+		font-weight: 400
+		margin-top: 68px
+		span
+			font-family: "Amble - Bold"
+			font-weight: bold
+			color: #d87843

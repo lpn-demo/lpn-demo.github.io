@@ -1,0 +1,262 @@
+/*==========  Desktop First  ==========*/
+@media (max-width: 991.98px) {
+  h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    margin-top: 30px;
+  }
+  header .hamburger {
+    top: 20px;
+    left: 20px;
+  }
+  header .row {
+    height: auto;
+  }
+  header .scroll {
+    display: none;
+  }
+  .main .txt {
+    margin-top: 80px;
+  }
+  .main .txt h2:after {
+    margin-bottom: 35px;
+  }
+  .main .section_btn .btn, .main .video .btn {
+    width: 350px;
+    height: 70px;
+  }
+  .main .section_btn, .main .video {
+    height: 350px;
+  }
+  .main .section2 .filter {
+    margin-bottom: 20px;
+  }
+  .main .section2 .btn {
+    width: 270px;
+    margin: 45px auto;
+  }
+  .main .section3 .clients {
+    padding-bottom: 80px;
+  }
+  .main .section4 .link h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .main .section4 .link h3:after {
+    margin-top: 15px;
+  }
+  .main .section4 .link .btn {
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .main .section7 .adress .text {
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main .section7 .adress .text p {
+    padding-top: 20px;
+  }
+  .main .section7 .form {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .main .section7 .form .name, .main .section7 .form .email {
+    width: 170px;
+  }
+  .main .section7 .form .name {
+    margin-right: 5px;
+  }
+  .main .section7 .form input {
+    width: 100%;
+    padding: 0;
+  }
+  .main .section7 .form .btn {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+  footer {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  header .txt h1:after {
+    margin-top: 15px;
+  }
+  header .txt p {
+    letter-spacing: 0;
+  }
+  .main .txt {
+    margin-top: 40px;
+  }
+  .main .section1 .txt {
+    margin-bottom: 40px;
+  }
+  .main .section_btn .btn, .main .main .video .btn {
+    font-size: 24px;
+    width: 270px;
+    height: 50px;
+  }
+  .main .section_btn, .main .main .video {
+    height: 250px;
+  }
+  .main .section2 .filter li {
+    margin-left: 20px;
+  }
+  .main .section2 .filtr-container .filtr-item {
+    padding: 5px;
+  }
+  .main .section2 .filtr-container .filtr-item .imag {
+    margin-top: 5px;
+  }
+  .main .section7 .adress .text {
+    float: initial;
+    text-align: center;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .main .section7 .adress .text .links a:last-child {
+    margin: 0;
+  }
+  .main .section7 .form {
+    text-align: center;
+    float: initial;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .main .section7 .form .name, .main .section7 .form .email {
+    width: auto;
+  }
+  .main .section7 .form .massage {
+    margin-top: 50px;
+  }
+  .main .section7 .form .btn {
+    margin-bottom: 15px;
+  }
+  footer {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    margin-top: 20px;
+  }
+  header .row {
+    min-height: 500px;
+  }
+  header .txt p {
+    margin-top: 20px;
+  }
+  .main .txt h2:after {
+    margin-bottom: 20px;
+  }
+  .main .txt {
+    margin-top: 40px;
+  }
+  .main .section1 .txt {
+    margin-bottom: 40px;
+  }
+  .main .section_btn .btn, .main .main .video .btn {
+    font-size: 20px;
+    width: 220px;
+    height: 50px;
+  }
+  .main .section2 .filter li {
+    font-size: 16px;
+  }
+  .main .section2 .filtr-container .filtr-item .imag {
+    margin-top: 20px;
+    position: relative;
+  }
+  .main .section2 .filtr-container .filtr-item .imag img {
+    width: 100%;
+  }
+  .main .section3 .clients {
+    padding-bottom: 40px;
+  }
+  .main .section3 .clients img {
+    margin: 25px auto;
+  }
+  .main .section4 .person img {
+    width: 100%;
+  }
+  .main .section4 .link {
+    margin-top: 20px;
+  }
+  .main .section4 .link .btn {
+    margin-bottom: 40px;
+  }
+  .main .section5 .carousel {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .main .section5 .carousel .owl-dots {
+    margin-top: 20px;
+  }
+  .main .section5 .carousel .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+  }
+  .main .section7 .adress .text {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .main .section7 .adress .text p {
+    font-size: 16px;
+  }
+  .main .section7 .form {
+    padding: 0;
+    text-align: center;
+    float: initial;
+    padding-top: 30px;
+  }
+  .main .section7 .form .name, .main .section7 .form .email {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .main .section7 .form .massage {
+    margin-top: 0;
+  }
+  .main .section7 .form .massage input {
+    width: 90%;
+  }
+  .main .section7 .form .btn {
+    margin: 15px auto;
+    float: initial;
+  }
+  footer p {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+  footer .logo {
+    width: 100%;
+  }
+}

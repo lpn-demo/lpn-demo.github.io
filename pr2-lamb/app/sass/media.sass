@@ -1,0 +1,300 @@
+@import "vars"
+
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	header
+		.top-line
+			.logo
+				margin-top: 0px
+			.nav
+				.nav-menu
+					a
+						font-size: 21px
+						margin-left: 15px
+						padding: 0 0px
+
+				.social
+					a
+						margin-left: 10px
+						&:first-child
+							margin-left: 10px
+					.fa
+						color: #fff
+						font-size: 21px
+						font-weight: 400
+	.main
+		.section_1
+			padding-bottom: 50px
+		.section_5
+			.txt
+				padding: 0 15px
+
+			.form
+				margin-left: 15px
+				
+// ≥992px
++media-breakpoint-down(md)
+	h1
+		font-size: 60px
+	h2
+		font-size: 36px
+	h3
+		font-size: 21px
+
+
+	header
+		.top-line
+			.btn_open
+				display: block
+			.btn_open, .btn_close
+				position: absolute
+				top: 25px
+				right: 25px
+				z-index: 11
+				.fa
+					font-size: 40px
+					color: #fff
+			.btn_close
+				position: fixed
+			.nav
+				display: none
+				position: fixed
+				top: 50%
+				left: 50%
+				float: right
+				margin-top: 40px
+				transform: translate(-50%, -50%)
+				z-index: 111
+				.nav-menu
+					display: block
+					a
+						display: block
+						text-align: center
+						font-size: 21px
+						font-weight: 700
+						margin-left: 0px
+						margin-bottom: 20px
+						&:first-child
+							margin-bottom: 20px
+						&.active, &:hover
+							&:before
+								border-top: inherit
+				&.active
+					display: block
+
+				.social
+					display: block
+					a
+						margin-left: 20px
+						&:first-child
+							margin: 5px
+						.fa
+							color: #dab33e
+
+		.text
+			.row
+				min-height: auto
+				height: 700px
+	
+	.main
+		.section_3
+			padding-top: 50px
+			.txt
+				h2
+					text-align: center
+				.item	
+					width: auto
+					margin: 0 auto
+					margin-bottom: 37px
+					&.special
+						position: relative
+						border: 1px solid #c89f2d
+						padding: 7px
+						&:after
+							content: 'Special'
+							position: absolute
+							top: -22px
+							text-align: center
+							right: -1px
+							background: #d4b867
+							color: #f8fafa
+							font-family: $default-font
+							font-size: 14px
+							font-weight: 400
+							width: 69px
+							height: 22px
+					p
+						padding-top: 3px
+					h3
+						border-bottom: 1px solid $accent
+						padding-bottom: 5px
+						span
+							float: right
+			
+		.section_4
+			.txt
+				margin: 50px 0
+		.section_5
+			padding: 50px 0
+			.hidden
+				display: none
+			.form
+				margin-left: 0
+				text-align: center
+				.block
+					text-align: left
+					display: inline-block
+					&.right
+						margin-left: 30px
+	footer
+
+		padding-top: 61px
+		padding-bottom: 71px
+		.txt
+			.card, .link
+				.fa
+					margin: 0 3px
+					color: #ffffff
+					font-size: 16px
+					font-weight: 400
+					
+
+	
+// ≥768px
++media-breakpoint-down(sm)
+	.main
+		.section_1
+			.img
+				display: none
+		.section_2	
+			.txt
+				text-align: center
+				margin: 50px 0
+				padding: 20px
+				background-color: rgba(#000, .67)
+				.img
+					margin-top: 40px
+					img:nth-child(2)
+						margin: 0 15px	
+
+		.section_4
+			.txt
+				margin: 50px 0
+				padding: 30px 
+				p
+					font-size: 18px
+					&:after
+						top: -20px
+						left: -25px
+						font-size: 56px
+				span
+					font-size: 18px
+
+
+	footer
+		padding-top: 30px
+		padding-bottom: 20px
+		.dark 
+			h3
+				&:after
+					margin-top: 18px
+					margin-bottom: 18px
+		.txt
+			margin-bottom: 40px
+			p
+				font-size: 16px
+				span
+					font-weight: 700
+
+			.card, .link
+				position: relative
+				margin-top: 10px
+				.fa
+					margin: 0 5px
+
+		
+
+// ≥576px
++media-breakpoint-down(xs)
+	h1
+		font-size: 40px
+	h2
+		font-size: 28px
+	h3
+		font-size: 20px
+	p
+		font-size: 16px
+
+	header
+		.text
+			.row
+				height: 500px
+			.btns
+				font-size: 17px
+				button
+					width: 170px
+					height: 45px
+				.dark
+					margin-right: 0
+					margin-bottom: 15px
+				.light
+					margin-left: 0
+
+	.main
+		.section_1
+			.txt
+				padding-top: 50px
+		.section_2
+			.txt
+				margin: 20px 0
+				padding: 10px
+				padding-top: 20px
+				.img
+					margin-top: 30px
+					img
+						width: 80px
+						max-width: 100%
+						height: auto
+					img:nth-child(2)
+						margin: 0 5px	
+
+		.section_4
+			.txt
+				margin: 30px 0
+				padding: 15px 
+				p
+					font-size: 16px
+					&:after
+						top: -20px
+						left: -10px
+						font-size: 56px
+				span
+					font-size: 16px
+
+		.section_5
+			padding: 30px 0
+			.form
+				margin-left: 0
+				text-align: center
+				input
+					width: 100%
+					margin-bottom: 10px
+				.block
+					display: block
+					&.right
+						margin-left: 0
+					span
+						display: block
+						color: #c9a131
+						font-family: $sub-font
+						font-size: 14px
+						font-weight: 700
+					span:nth-child(3)
+						margin-top: 0
+				.btn
+					margin-top: 5px
+					margin-right: 0px
