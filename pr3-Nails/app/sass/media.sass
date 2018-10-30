@@ -1,0 +1,138 @@
+@import "vars"
+
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+	.main
+		.about
+			.txt
+				h3
+					font-size: 25px
+				p
+					font-size: 18px
+			.img-box
+				height: 320px
+
+		.services
+			.service-block
+				margin-top: 10px
+				h3
+					font-size: 23px
+				.icon
+					width: 130px
+					margin-bottom: 10px
+		.portfolio
+			.item
+
+
+
+// ≥768px
++media-breakpoint-down(sm)
+	.main
+		.home
+			.row
+				height: calc(100vh - 60px)
+		.about
+			.txt
+				text-align: center	
+				h3
+					margin-top: 10px
+					font-size: 25px
+				p
+					font-size: 18px
+		.services
+			background-position: 0% 0%
+			.service-block
+				margin-top: 0px
+				margin-bottom: 20px
+				h3
+					font-size: 22px
+				.icon
+					width: 150px
+			.left
+				margin-left: auto
+			.right
+				margin-right: auto
+
+
+// ≥576px
++media-breakpoint-down(xs)
+	#navigation
+		float: inherit
+		text-align: center
+		li
+			margin-left: 7px
+			margin-right: 7px
+			a
+				font-size: 18px
+				&:hover
+					border-bottom: 0px solid $accent
+
+	header
+		.top-header
+			.logo
+				font-size: 20px
+				text-align: center
+				span
+					font-size: 12px
+		
+
+	.main
+		.home
+			.link
+				position: absolute
+				left: 10px
+				bottom: 10px
+			.txt
+				h1
+					font-size: 30px
+				p
+					font-size: 20px
+			.button
+				margin-top: 20px
+				font-size: 16px
+				
+		.about
+			.txt
+				text-align: center	
+				h3
+					margin-top: 10px
+					font-size: 25px
+				p
+					font-size: 18px
+		.services
+			background-position: 10% 0%
+			.service-block
+				h3
+					font-size: 20px
+				.icon
+					width: 120px
+		.portfolio
+			position: relative
+			.button
+				bottom: 6px
+				padding: 5px 30px
+				font-size: 16px
+	
+			.slick-prev, .slick-next
+				bottom: -65px
+			.slick-prev
+				left: 10%	
+
+			.slick-next
+				right: 10%	
+
+	footer
+		.txt
+			p
+				font-size: 16px
+
+
+
+
