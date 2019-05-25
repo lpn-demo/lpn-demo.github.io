@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Platora</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- AmChart -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/lang/ru_RU.js"></script>
+    <!-- AmChart -->
+
+
+    <!--JS libs -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    
+    <script src="libs/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="libs/scroll/perfect-scrollbar.jquery.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <!--JS libs end-->
+
+    <!--My JS  -->
+    <script src="js/amChart.js"></script>
+    <script src="js/dataTable.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--My JS  -->
+
+</head>
+
+<body class="page page1">
+
+<div id="bg"></div>
+<div class="preloader">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<!-- Header -->
+<header>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#" class="logo"><img src="img/logo.png"></a>
+                    <button class="openMenu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
+                    <ul class="nav-menu">
+                        <a href="#" class="logo logoMob"><img src="img/logo.png"></a>
+                        <button class="closeMenu"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <li class="active"><a href="page1.html">Курсы валют</a></li>
+                        <li><a href="page2.html">Курсы банков</a></li>
+                        <li><a href="page4.html">Выгодный обмен</a></li>
+                        <li><a href="page6.html">Рейтинги банков</a></li>
+                        <div class="time timeMob">
+                            <hr class="lineGrad">
+                            <span>Среда 12.12.2018</span>
+                            12:49, UTC +3 (MSK)
+                        </div>
+                    </ul>
+
+                    <div class="heade-right">
+                        <div class="local">
+                            <span><img src="img/icon-location.svg"><b>Выберите город</b></span>
+                            <select class="select-city"></select>
+                        </div>
+                        <div class="time">
+                            <span>Среда 12.12.2018</span>
+                            12:49, UTC +3 (MSK)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- Header End -->
+
+<!-- Main -->
+<div class="main">
+    <div class="container">
+
+        <div class="breadcrumbWrapper">
+            <ul class="breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Курсы валют</a></li>
+                <li><a href="#">Курсы банков</a></li>
+                <li class="active"><a href="#">Курсы доллара США</a></li>
+            </ul>
+        </div>
+
+
+        <!-- description-page -->
+        <div class="description-page description-page-top">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Курсы валют</h2>
+                    <p>Сервис Platora позволяет в режиме онлайн отследить заявленный ЦБ РФ курс валюты на сегодня,
+                        динамику его роста и падения за предшествующий период времени, а также узнать свежие новости
+                        финансовых рынков и прогнозируемый курс валют на завтра.</p>
+                </div>
+            </div>
+        </div>
+        <!-- description-page END-->
+
+
+        <!-- SECTION 1 ................................................................................................... -->
+        <div class="section section1">
+            <div class="row">
+
+                <!-- Converter BLOCK.....................................-->
+                <div class="col-lg-5 block">
+                    <div class="blockBOX ">
+                        <div class="title-wrap">
+                            <div class="head-title">
+                                <h3>Конвертер валют</h3>
+                                <p class="info">На основе курса ЦБ РФ на сегодня: <span class="time">12.12.2018</span></p>
+                            </div>
+                        </div>
+                          
+                        <hr class="lineGrad">
+                        <div class="content">
+                            <div class="boxConvert">
+                                <div class="box box1">
+                                    <select class="select-for-table"></select>
+                                    <span class="rate">1 EUR = 0.268700 USD</span>
+                                    <div class="resultConvert"><span>€</span> 4 567.038</div>
+                                </div>
+
+                                <hr class="lineGrad">
+
+                                <div class="box box2">
+                                    <select class="select-for-table"></select>
+                                    <span class="rate">1 USD = 3.8640 EUR</span>
+                                    <div class="resultConvert"><span>$</span> 1 200.58</div>
+                                </div>
+                                <!-- Refresh Button -->
+                                <button class="refreshBtn"><img src="img/icon-reload.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Converter BLOCK..................................... END-->
+
+
+                <!-- CHART BLOCK.....................................-->
+                <div class="col-lg-7 block">
+                    <div class="blockBOX">
+                        <div class="title-wrap">
+                            <div class="head-title">
+                                <h3>Биржевой курс Доллара США (Forex)</h3>
+                                <p class="info">Сегодня, <span class="time">25.01.2019</span></p>
+                            </div> 
+                            <div class="selectBox multiSelect" data-atr="box1page1">
+                            <div><span id="box1page1" class=valueTag>Доллар США и Евро</span> <i
+                                class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                <ul class=selectMenuBox>
+                                    <li class=option>Доллар США и Евро</li>
+                                    <li class=option>Доллар США</li>
+                                    <li class=option>Евро</li>
+                                </ul>
+                            </div> 
+                        </div>
+                        
+                        
+                        <hr class="lineFull">
+
+                        <div class="content">
+                            <div class="chart">
+                                <div class="chart-wr chart-wr-mini">
+                                    <ul class="nav-chart">
+                                        <li class="active">Час</li>
+                                        <li>День</li>
+                                        <li>Неделя</li>
+                                        <li>Месяц</li>
+                                        <li>Квартал</li>
+                                        <li>Год</li>
+                                        <li>За всё время</li>
+                                    </ul>
+                                    <div class="rowInfo">
+                                        <h3>Курс Доллара США и Евро :</h3>
+                                        <div class="statwrap">
+                                            <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">$
+                                                65,2354 <span>(+0.33%)</span>
+                                            </div>
+                                            <div class="status"><img class="statusDown" src="img/icon-arrow-red.svg" alt="">€
+                                                76,5445 <span>(-0.54%)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CHART .....................................-->
+                                    <div id="chartdiv1" class="chart-m"></div>
+                                    <!-- CHART .....................................-->
+                               </div>
+                            </div>
+                            <!-- CHART BLOCK..................................... END-->
+                        </div>
+                        
+
+                    </div>
+                </div>
+             </div>
+        </div>
+        <!-- SECTION 1 ...................................................................................................END -->
+
+
+        <!-- SECTION 2 ................................................................................................... -->
+        <div class="section section2">
+            <div class="row">
+
+                <!-- courseBox USA ................................................................................................... -->
+                <div class="col-lg-6 block">
+                    <div class="blockBOX ">
+                            
+                        <div class="title-wrap">
+                            <img src="img/flags/USA.png" alt="usa">
+                            <div class="head-title">
+                                <h3>Оф<span class="hide">ициальный</span> курс Доллара США</h3>
+                                <p class="info">Курс ЦБ РФ сегодня, <span class="date">19.01.2019</span><span class="hide">| Обновленно в
+                                    <span class="time">13:34</span></span></p>
+                            </div>
+                            <i class="fa fa-usd iconBlock" aria-hidden="true"></i>
+                        </div>
+                            
+
+                        <hr class="lineGrad">
+                        <div class="content">
+                            <div class="courseBox box box1">
+                                <div class="courseBoxMiniWrap">
+                                    <div class="boxInfo">
+                                        <div class="date">вчера: 11.12.2018</div>
+                                        <div class="status"><img class="statusDown" src="img/icon-arrow-red.svg" alt="">65.90
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">- 1.2 RUB (0,008%)</div>
+                                    </div>
+                                    <div class="boxInfo active">
+                                        <div class="date">сегодня: 12.12.2018</div>
+                                        <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">66.34
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">+ 0.5 RUB (0,005%)</div>
+                                    </div>
+                                    <div class="boxInfo">
+                                        <div class="date">завтра: 12.12.2018</div>
+                                        <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">67.52
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">+ 3.2 RUB (0,040%)</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <hr class="lineGrad">
+                            <div class="exchangeBox box ">
+                                <div class="boxInfo">
+                                    <div class="head">
+                                        <h3>Выгодный курс обмена Доллара США в <select class="select-city-mini"></select></h3>
+                                    </div>
+                                    <div class="rowInfo buy">
+                                        <span class="info">Продать</span>
+                                        <div class="rectInput"><input type="text" value="100"><span class="sign"><i
+                                                class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                        <span class="info">
+                                                    сегодня по <span class="hide">лучшей цене</span> 66 034 ₽ в <a href="#">Альфа Банк</a> 
+                                                </span>
+                                    </div>
+                                    <div class="rowInfo sell">
+                                        <span class="info">Купить</span>
+                                        <div class="rectInput"><input type="text" value="100"><span class="sign"><i
+                                                class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                        <span class="info">
+                                                    сегодня по <span class="hide">лучшей цене</span> 66 012 ₽ в <a href="#">Рос Банк</a> 
+                                                </span>
+                                    </div>
+
+                                    <div class="link "><a href="#">Посмотреть курсы всех банков</a></div>
+
+                                </div>
+                            </div>
+                            <hr class="lineGrad">
+                            <div class="dynamicsCourse box box1">
+                                <div class="boxInfo">
+
+                                    <div class="head-wrap">
+                                        <h3>Динамика курса Доллар США </h3>
+                                        <div class="selectBox multiSelect" data-atr="box2page1">
+                                            <div><span id="box2page1" class=valueTag>Неделя</span> <i
+                                                    class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                            <ul class=selectMenuBox>
+                                                <li class=option>Неделя</li>
+                                                <li class=option>Месяц</li>
+                                                <li class=option>Год</li>
+                                            </ul>
+                                        </div>
+                                        <p class="info">График построен на основе динамики курса ЦБ РФ</p>
+                                    </div>
+
+                                    <!-- CHART .....................................-->
+                                    <div id="chartdiv2" class="chart-m"></div>
+                                    <!-- CHART .....................................-->
+
+                                    <div class="link"><a href="#">Подробнее</a></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- courseBox USA .............................................................................END -->
+                <!-- courseBox USA ................................................................................................... -->
+                <div class="col-lg-6 block">
+                    <div class="blockBOX">
+                        <div class="title-wrap">
+                            <img src="img/flags/EUR.png" alt="eur">
+                            <div class="head-title">
+                                <h3>Официальный курс Евро</h3>
+                                <p class="info">Курс ЦБ РФ сегодня, <span class="date">19.01.2019</span><span class="hide">| Обновленно в
+                                    <span class="time">13:34</span></span></p>
+                            </div>
+                            <i class="fa fa-eur iconBlock" aria-hidden="true"></i>
+                        </div>
+                            
+                        <hr class="lineGrad">
+                        <div class="content">
+                            <div class="courseBox box box1">
+                                <div class="courseBoxMiniWrap">
+                                    <div class="boxInfo">
+                                        <div class="date">вчера: 11.12.2018</div>
+                                        <div class="status"><img class="statusDown" src="img/icon-arrow-red.svg" alt="">65.90
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">- 1.2 RUB (0,008%)</div>
+                                    </div>
+                                    <div class="boxInfo active">
+                                        <div class="date">сегодня: 12.12.2018</div>
+                                        <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">66.34
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">+ 0.5 RUB (0,005%)</div>
+                                    </div>
+                                    <div class="boxInfo">
+                                        <div class="date">завтра: 12.12.2018</div>
+                                        <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">67.52
+                                            <span>₽</span></div>
+                                        <span class="oneUnit">за 1 доллар</span>
+                                        <div class="statusValue">+ 3.2 RUB (0,040%)</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <hr class="lineGrad">
+                            <div class="exchangeBox box">
+                                <div class="boxInfo">
+                                    <div class="head">
+                                        <h3>Выгодный курс обмена Евро <select class="select-city-mini"></select></h3>
+                                    </div>
+                                    <div class="rowInfo buy">
+                                        <span class="info">Продать</span>
+                                        <div class="rectInput"><input type="text" value="100"><span class="sign"><i
+                                                class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                        <span class="info">
+                                                    сегодня по <span class="hide">лучшей цене</span> 66 034 ₽ в <a href="#">Альфа Банк</a> 
+                                                </span>
+                                    </div>
+                                    <div class="rowInfo sell">
+                                        <span class="info">Купить</span>
+                                        <div class="rectInput"><input type="text" value="100"><span class="sign"><i
+                                                class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                        <span class="info">
+                                                    сегодня по <span class="hide">лучшей цене</span> 66 012 ₽ в <a href="#">Рос Банк</a> 
+                                                </span>
+                                    </div>
+
+                                    <div class="link "><a href="#">Посмотреть курсы всех банков</a></div>
+
+                                </div>
+                            </div>
+                            <hr class="lineGrad">
+                            <div class="dynamicsCourse box box1">
+                                <div class="boxInfo ">
+                                    <div class="head-wrap">
+                                        <h3>Динамика курса Евро </h3>
+                                        <div class="selectBox multiSelect" data-atr="box3page1">
+                                            <div><span id="box3page1" class=valueTag>Неделя</span> <i
+                                                    class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                            <ul class=selectMenuBox>
+                                                <li class=option>Неделя</li>
+                                                <li class=option>Месяц</li>
+                                                <li class=option>Год</li>
+                                            </ul>
+                                        </div>
+                                        <p class="info">График построен на основе динамики курса ЦБ РФ</p>
+                                    </div>
+
+                                    <!-- CHART .....................................-->
+                                    <div id="chartdiv3" class="chart-m"></div>
+                                    <!-- CHART .....................................-->
+
+                                    <div class="link"><a href="#">Подробнее</a></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+                <!-- courseBox EUR .............................................................................END -->
+
+
+            </div>
+        </div>
+        <!-- SECTION 2 ................................................................................................... -->
+
+
+        <!-- SECTION 3 Table 1 ................................................................................................... -->
+        <div class="myTable table1 section section3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title-wrap">
+                        <div class="head-title">
+                            <h3>Оф<span class="hide">ициальные</span> курсы иностранных валют</h3>
+                            <p class="info">Курс ЦБ РФ сегодня, <span class="date">19.01.2019</span><span class="hide">| Обновленно в <span
+                                    class="time">12:30</span></span></p>
+                        </div>
+                    </div>
+                    
+
+                    <table class="nowrap table_id hoverTable" id="table_id_1">
+                        <thead>
+                        <tr>
+                            <th>Наименование валюты</th>
+                            <th>Количество единиц</th>
+                            <th>Курс Цб РФ на сегодня</th>
+                            <th>Курс Цб РФ на сегодня</th>
+                            <th>Динамика</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><img src="img/flags/GPB.png" alt="gpb"><span class="descrVal">Британский фунт</span>
+                            </td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/GHF.png" alt="ghf"><span class="descrVal">Швейцарский франк</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/CNY.png" alt="cny"><span class="descrVal">Китайский юянь</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/CAD.png" alt="cad"><span class="descrVal">Канадский доллар</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/SEK.png" alt="sek"><span class="descrVal">Шведская крона</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/USA.png" alt="usa"><span class="descrVal">Доллар США</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/flags/EUR.png" alt="eur"><span class="descrVal">Евро</span></td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="100">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">£</span></div>
+                            </td>
+                            <td>84.29 RUB <sup class="down">-5</sup></td>
+                            <td>-2.13 RUB <sup class="up">+5</sup></td>
+                            <td>line</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3 Table 1 ..........................................................................END -->
+
+        <!-- description-page -->
+        <div class="description-page description-page-bottom">
+            <div class="row">
+                <div class="col-12">
+                    <p>Курс обмена валюты в банках и обменных пунктах меняется в течение дня и зависит от новостей на
+                        финансовом рынке, а также от котировок валют. В этом разделе вы найдете полную информацию о
+                        наиболее выгодных курсах обмена доллара и евро на сегодня в банках. Сравните показатели
+                        покупка/продажа интересующей вас валюты в разных банках.</p>
+                </div>
+            </div>
+        </div>
+        <!-- description-page END-->
+    </div>
+
+
+    <!-- Button Top -->
+    <button id="btnTop"><img src="img/iconUp.svg"></button>
+    <!-- Button Top end-->
+</div>
+<!-- Main End -->
+
+
+<!-- FOOTE ............................................................................................................ -->
+<footer>
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="logo"><img src="img/logo-footer.png"></a>
+                    <span class="copyright">Copyright © 2018-2019 Platora.<br>Все права защищены.</span>
+                    <div class="socialLink">
+                        <p>Рассказать о проекте:</p>
+                        <ul class="socials">
+                            <li><a href="##"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer1">
+                        <li>Курсы валют</li>
+                        <li><a href="#">Информация о валюте</a></li>
+                        <li><a href="#">Курс доллара США</a></li>
+                        <li><a href="#">Курс Евро</a></li>
+                        <li><a href="#">Обмен валюты</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer2">
+                        <li>Рейтинги</li>
+                        <li><a href="#">По активам</a></li>
+                        <li><a href="#">По вкладам</a></li>
+                        <li><a href="#">По кредитам</a></li>
+                        <li><a href="#">Список банкав России</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer3">
+                        <li>Platora</li>
+                        <li><a data-toggle="modal" data-target="#contactPop" href="#contactPop">Связаться с нами</a>
+                        </li>
+                        <li><a href="#">Стать партнером</a></li>
+                        <li><a href="#">Техническая поддержка</a></li>
+                        <li><a href="#">Список банкав России</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="lineGrad">
+        <div class="wrap-b">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Содержание сайта platora.ru не является офертой или рекомендацией к покупке / продаже каких-либо
+                        активов и носит исключительно информационно-справочный характер. Официальные курсы иностранных
+                        валют по отношению к рублю устанавливаются Центральным банком Российской Федерации без
+                        обязательства покупать или продавать указанные валюты по данному курсу. Обращаем ваше внимание,
+                        что значения курсов валют могут меняться в течение дня. Уточняйте условия обмена валют в офисах
+                        банков или по телефонам справочных служб.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- FOOTE ............................................................................................................ -->
+
+<!-- pop Contact  -->
+<div class="modal fade popup" id="contactPop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content contactPop">
+            <div class="modal-header">
+
+                <h4>Связатся с нами</h4>
+                <button type="button" class="close closePopup" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <hr class="lineGrad">
+            <div class="modal-body">
+                <form>
+                    <label>
+                        <p>Ваше имя</p>
+                        <input type="name" name="" placeholder="Введите ваше имя">
+                    </label>
+                    <label>
+                        <p>Ваша почта</p>
+                        <input type="email" name="" placeholder="Введите свой электронный адрес">
+                    </label>
+                    <label>
+                        <p>Тема обращения</p>
+                        <div class="selectBox themereson multiSelect" data-atr="theme">
+                            <div><span id="theme" class=valueTag>Выбирите тематику обращения</span> <i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></div>
+                            <ul class=selectMenuBox>
+                                <li class=option>Доллар США и Евро</li>
+                                <li class=option>Доллар США</li>
+                                <li class=option>Евро</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label>
+                        <p>Ваше сообщение</p>
+                        <div class="textWrap">
+                            <textarea maxlength="300" type="text" name="sessionNum" id="sessionNum"
+                                      placeholder="Напишите своё обращение к нам"></textarea>
+                            <span class="sessionNum_count"><span id="sessionNum_count">0</span>/300</span>
+                        </div>
+
+                    </label>
+
+                    <button class="send">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pop Contact  End-->
+
+
+
+</body>
+</html>

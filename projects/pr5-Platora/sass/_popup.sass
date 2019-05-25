@@ -1,0 +1,657 @@
+
+#bg
+	background: rgba($charcoal-grey, 0.44)
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	display: none
+	&.active
+		display: block
+
+.nicescroll-cursors
+	width: 3px
+	height: 80px
+	border-radius: 8px
+
+.modal-dialog
+	max-width: 55%
+
+.modal-open .modal
+	background: rgba($charcoal-grey, 0.44)
+
+.modal-header
+	display: block
+	padding: 0
+.modal-body
+	padding: 0
+.modal-header .close
+	padding: 0
+	outline: none
+.closePopup
+	position: absolute
+	top: 31px
+	right: 57px
+	border: none
+	background: none
+	padding: 0
+	font-size: 28px
+	color: rgba($cloudy-blue, .5)
+	&:hover
+		color: $cloudy-blue
+			
+// popup contact
+#contactPop
+	.modal-dialog
+		max-width: 576px
+.contactPop
+	width: 576px
+	border-radius: 8px
+	position: fixed
+	padding: 30px 40px
+	background: #fff
+	h4
+		position: relative
+		font-family: $font
+		font-size: 16px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 25px
+	.send
+		display: block
+		width: 196px
+		height: 50px
+		border-radius: 6px
+		background-color: $cornflower-blue
+		border: none
+		font-family: $font
+		font-size: 14px
+		color: #ffffff
+		margin: 0 auto
+		cursor: pointer
+		margin-top: 30px
+	.textWrap
+		textarea
+			font-family: $font
+			width: 100%
+			height: 20px
+			min-height: 40px
+			border: none
+			position: relative
+			overflow: hidden
+			outline: none
+			color: $charcoal-grey
+			&::placeholder
+				color: $cloudy-blue
+		.sessionNum_count
+			position: absolute
+			right: 0
+			bottom: 0
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $cloudy-blue
+	label
+		position: relative
+		display: block
+		margin-bottom: 26px
+		text-align: left
+		border-bottom: 1px solid #c1c5cb
+		padding-bottom: 10px
+		p
+			font-family: $font
+			font-size: 16px
+			font-size: 16px
+			font-weight: 500
+			color: #313943
+	.selectBox.themereson
+		float: none		
+		width: 100%
+		border: none
+		padding: 0
+		margin: 0
+		background: none
+		height: auto
+		.valueTag
+			font-family: $font
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $cloudy-blue
+		
+	input
+		min-width: 100%
+		border: none
+		outline: none
+		font-family: $font
+		font-size: 14px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		&::placeholder
+			color: $cloudy-blue
+
+
+// popup Request
+#getCourse
+	.modal-dialog
+		max-width: 556px
+.popupRequest
+	width: 556px
+	height: 475px
+	border-radius: 8px
+	transition: all .3s
+	padding: 26px 40px
+	padding-bottom: 40px
+	background: #fff
+	h4
+		position: relative
+		font-family: $font
+		font-size: 16px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 25px
+
+	.wrapBtn
+		display: block
+		.ChoisePop
+			position: relative
+			display: inline-block
+			width: 223px
+			height: 50px
+			border-radius: 8px
+			background-color: #ffffff
+			border: 1px solid rgba(222, 225, 230, 0.81)
+			padding-top: 8px
+			padding-left: 10px
+			cursor: pointer
+			&:first-child
+				margin-right: 24px
+			&:last-child
+				float: right
+			&.active
+				.selectMenuBox
+					display: block
+					width: 100%
+				.fa-angle-down
+					color: $cornflower-blue
+					transform: rotate(180deg)
+			.fa-angle-down
+				color: $cloudy-blue
+				position: absolute
+				top: 17px
+				right: 10px
+				font-size: 18px
+			.valueTag
+				display: inline-block
+				font-size: 16px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				letter-spacing: normal
+				color: $charcoal-grey
+				vertical-align: -webkit-baseline-middle
+				span
+					display: inline-block
+				img
+					margin-right: 15px
+					width: 34px
+			.selectMenuBox
+				position: absolute
+				display: none
+				width: 100%
+				height: auto
+				top: 55px
+				left: 0
+				margin: 0
+				padding: 0
+				list-style: none
+				background: #ccc
+				z-index: 10
+				border-radius: 5px
+				border: 1px solid rgba(222, 225, 230, 0.81)
+				background-color: #ffffff
+				.option
+					font-size: 11px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $charcoal-grey
+					padding: 9px 10px
+					border-bottom: 1px solid rgba(222, 225, 230, 0.81)
+					&:hover
+						color: $bluey-grey
+					&:active
+						color: $cornflower-blue
+					img
+						width: 24px
+						margin-right: 12px
+					span
+						vertical-align: middle
+
+
+	.wrapRange
+		position: relative
+		.rect
+			position: absolute
+			top: -38px
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $bluey-grey
+		.rect1
+			left: 0
+		.rect2
+			right: 0
+		.rectinfo
+			position: absolute
+			top: -65px
+			left: 23%
+			opacity: 0.5
+			font-size: 11px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $bluey-grey
+
+
+	.wrapRange
+		position: relative
+		margin-bottom: 40px
+		margin-top: 100px
+		.range
+		.value-range
+			position: absolute
+			top: -43px
+			left: 110px
+			font-size: 26px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			&:after
+				content: ' ₽'
+		.noUi-base, .noUi-connects
+			padding-top: 10px
+		.noUi-horizontal
+			width: 242px
+			height: 10px
+			box-shadow: none
+			margin: 0 auto
+			margin-left: 105px
+		.noUi-target
+			position: relative
+			border: none
+			border-radius: 0
+			background: transparent
+			&:before
+				position: absolute
+				content: ''
+				top: 10px
+				left: 0
+				width: 100%
+				height: 1px
+				background: linear-gradient(to right, transparent, rgba(222, 225, 230, 0.81), transparent)
+		.noUi-connect
+			border-radius: 0
+			height: 1px
+			background: linear-gradient(to right, transparent, rgb(77, 105, 215))
+		.noUi-handle
+			border: none
+			top: 0
+			outline: none
+			position: absolute
+			z-index: 2
+			width: 20px
+			height: 20px
+			background: rgb(77, 105, 215)
+			border-radius: 50%	
+			border: none
+			box-shadow: none
+			box-shadow: 0 8px 12px 0 rgba(77, 105, 215, 0.2)
+			&:before
+				display: block
+				height: auto
+				width: auto
+				position: absolute
+				top: 6px
+				right: 6px
+				bottom: 6px
+				left: 6px
+				content: ""
+				background-color: #fff
+				border-radius: inherit
+			&:after
+				display: none
+
+
+	.form
+		height: 14px
+		font-size: 12px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		margin-bottom: 21px
+		p
+			color: #c1c5cb
+		.text
+			border-radius: 6px
+			background-color: rgba(242, 244, 247, 0.29)
+			border: 1px solid rgba(222, 225, 230, 0.81)
+			width: 100%
+			min-width: 100%
+			height: 50px
+			padding-left: 15px
+			font-size: 14px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			&::placeholder
+				color: #c1c5cb
+		.send
+			width: 220px
+			height: 50px
+			border-radius: 6px
+			background-color: $cornflower-blue
+			font-family: $font
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: center
+			color: #ffffff
+			border: none
+			float: right
+			margin-top: 24px
+
+			
+// popup Requisites
+.popuprequisites
+	border-radius: 8px
+	padding: 26px 40px
+	padding-bottom: 40px
+	background: #fff
+	
+	h4
+		position: relative
+		font-family: $font
+		font-size: 18px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 25px
+		
+	.blockrequisites
+		width: 100%
+		tr
+			font-size: 14px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			height: 50px
+			&:before
+				position: absolute
+				content: ''
+				left: 0
+				width: 100%
+				height: 1px
+				background: linear-gradient(to right, transparent, rgba(222, 225, 230, 0.4), transparent)
+			td
+				padding: 13px 0px
+				vertical-align: middle
+				padding-right: 35px
+			td:last-child
+				color: $bluey-grey
+
+
+
+// popup MAP
+
+#mapPop
+	.modal-dialog
+		max-width: 70%
+		height: 70%
+		.mapboxgl-map
+			// overflow: visible
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas
+	outline: none
+
+.modal-inline-block
+	display: block
+	z-index: -1
+	opacity: 0
+.modal-inline-block-top
+	z-index: 1050
+	opacity: 1
+.mapPop
+	border-radius: 8px
+	background: #fff
+	width: 100%
+	height: 100%
+	.modal-header 
+		padding: 26px 20px
+		padding-bottom: 0
+		z-index: 10
+		background: #fff
+	h4
+		position: relative
+		font-family: $font
+		font-size: 18px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 25px
+
+	.marker 
+		width: 30px
+		height: 30px
+		box-shadow: 0 5px 7px 0 rgba(56, 66, 84, 0.12), inset 0 0 6px 0 rgba(56, 66, 84, 0.17)
+		background-color: $cornflower-blue
+		cursor: pointer
+		border-radius: 50%
+		text-align: center
+		line-height: 2
+		font-family: $font
+		font-size: 13px
+		font-weight: 500
+		color: #ffffff
+		border: 3px solid #fff
+		&.active
+			background: #374055
+	.mapboxgl-popup 
+		max-width: 300px
+	.mapboxgl-popup-content 
+		border-radius: 8px
+		padding: 20px
+		.mapboxgl-popup-close-button
+			display: none
+		h6
+			position: relative
+			font-family: $font
+			font-size: 12px
+			font-weight: 600
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			margin-bottom: 10px
+		h5
+			position: relative
+			font-family: $font
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			margin-bottom: 20px
+			&::before
+				position: absolute
+				content: ''
+				left: 0
+				bottom: -10px
+				width: 100%
+				height: 1px
+				background: linear-gradient(to right, transparent, rgba($cloudy-blue, 0.4), transparent)
+		p
+			margin-bottom: 15px
+			font-size: 12px
+			padding-left: 45px
+			color: $cloudy-blue
+			line-height: normal
+		.adress
+			position: relative
+			&:before
+				position: absolute
+				top: 5px
+				left: 0px
+				content: '\f278'
+				font: normal normal normal 14px/1 FontAwesome
+				color: $cornflower-blue
+				font-size: 20px
+		.tel
+			position: relative
+			&:before
+				position: absolute
+				top: 0px
+				left: 0px
+				content: '\f095'
+				font: normal normal normal 14px/1 FontAwesome
+				color: $cornflower-blue
+				font-size: 20px
+		table
+			width: 100%
+			td
+				color: $cloudy-blue
+				font-size: 12px
+			td:last-child
+				text-align: right
+				color: $cornflower-blue
+	.mapboxgl-ctrl-group:not(:empty)
+		box-shadow: none
+	.mapboxgl-ctrl-group
+		background: none
+		box-shadow: none
+	.mapboxgl-ctrl-group>button
+		width: 30px
+		height: 30px
+		font: normal normal normal 14px/1 FontAwesome
+		border-radius: 5px
+		box-shadow: 0 3px 5px 0 rgba(56, 66, 84, 0.12)
+		background-color: #ffffff
+		color: $cloudy-blue
+		&:hover
+			background: #fff
+			color: $cornflower-blue
+	.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in
+		background-image: none
+		margin-bottom: 5px
+		&:before
+			content: '\f067'
+			font-size: 14px
+	.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out
+		background-image: none
+		&:before
+			content: '\f068'
+			font-size: 14px
+	.mapboxgl-ctrl-top-right
+		bottom: 25px
+		right: 25px	
+		top: auto
+	.mapboxgl-ctrl-compass
+		display: none
+
+
+
+	#map 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 0 0 8px 8px
+	.geocoder 
+		width: 184px
+		height: 36px
+		border-radius: 5px
+		box-shadow: 0 3px 5px 0 rgba(56, 66, 84, 0.12)
+		background-color: #ffffff
+		position: absolute
+		z-index: 1
+		right: 20px
+		top: 90px
+		&:hover .geocoder-icon-search
+			color: $cornflower-blue
+	.mapboxgl-ctrl-geocoder input[type='text']
+		font-family: $font
+		font-size: 11px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: $cloudy-blue
+		padding: 10px
+		
+
+	.mapboxgl-ctrl-geocoder .geocoder-icon-search
+		background-image: none
+		font: normal normal normal 14px/1 FontAwesome
+		position: absolute
+		top: 13px
+		right: 10px
+		left: auto
+		color: $cloudy-blue
+		&:before
+			content: '\f002'
+			font-size: 14px
+	.mapboxgl-ctrl-geocoder 
+		min-width: 100%
+

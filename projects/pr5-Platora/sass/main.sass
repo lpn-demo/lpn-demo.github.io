@@ -1,0 +1,1441 @@
+@import "header"
+@import "footer"
+@import "popup"
+
+
+.container
+	padding: 0
+.main
+	position: relative
+.breadcrumbWrapper
+	.breadcrumb
+		padding: 0
+		margin: 0
+		list-style: none
+		line-height: 0
+		margin-top: 23px
+		margin-bottom: 15px
+		li
+			position: relative
+			display: inline-block
+			font-size: 18px
+			a
+				text-decoration: none
+				opacity: 0.75
+				font-size: 11px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				letter-spacing: normal
+				vertical-align: middle
+				color: #aeb4bf
+				&:hover
+					color: #959ba5
+			&.active 
+				a
+					color: #959ba5
+		li:first-child:before
+			display: none 
+		li:before 
+			display: inline-block
+			position: relative
+			background: #d7d9df
+			content: ""
+			width: 3px
+			height: 3px
+			border-radius: 50%
+			margin: 0 10px
+			vertical-align: middle
+
+		li:after
+			// display: inline-block
+			// position: relative
+			// color: #d7d9df
+			// content: "•"
+			// margin: 0 10px
+			// font-size: 8px
+		li.active:before
+			background: rgba(#959ba5, .6)
+
+
+
+
+
+.description-page-top
+	margin-top: 15px
+.description-page-bottom
+	margin-top: 35px
+	margin-bottom: 26px
+.description-page
+	h2
+		font-size: 24px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 10px
+	h3
+		font-size: 20px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $bluey-grey
+	p
+		font-size: 16px
+		font-weight: 100
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.75
+		letter-spacing: normal
+		color: $bluey-grey
+		margin-bottom: 20px
+
+#btnTop
+	position: fixed
+	bottom: 196px
+	width: 50px
+	height: 50px
+	border-radius: 6px
+	box-shadow: 0 15px 25px 0 rgba(27, 42, 102, 0.2)
+	background-color: $cornflower-blue
+	text-align: center
+	cursor: pointer
+	right: -100px
+	transition: all .25s ease
+	z-index: 12
+	border: none
+	&.active
+		right: 30px
+
+hr.lineFull
+	position: relative
+	outline: 0
+	border: 0
+	color: black
+	text-align: center
+	height: 1px
+	margin-top: 22px
+	margin-bottom: 0
+	&:after
+		position: absolute
+		content: ''
+		width: 100%
+		height: 1px
+		left: 0
+		background: rgba($cloudy-blue, 0.4)
+hr.lineGrad
+	position: relative
+	outline: 0
+	border: 0
+	color: black
+	text-align: center
+	height: 1px
+	margin-top: 22px
+	margin-bottom: 0
+	&:after
+		position: absolute
+		content: ''
+		width: 100%
+		height: 1px
+		left: 0
+		background: linear-gradient(to right, transparent, rgba($cloudy-blue, 0.4), transparent)
+
+.select-city-mini, .select-city, .selectMonth, .select-for-table
+	display: none
+.select2-container--default 
+	.container-select-for-month 
+		background: #fff
+		.select2-selection__arrow 
+			float: right
+	.container-select-for-table
+		border: none
+		background: none
+		outline: none
+		white-space: nowrap
+		
+		.select2-selection__rendered
+			padding: 0
+			display: inline-block
+			float: left
+			.flag
+				width: 34px
+				margin-right: 10px
+				padding-top: 0
+			.descrFlag
+				display: inline-block
+				font-size: 14px
+				padding-top: 8px
+				margin-left: 0
+				color: #2c333d
+		.select2-selection__arrow 
+			display: inline-block
+			position: relative
+			width: auto
+			margin-left: 15px
+			top: 8px
+			color: #bec4ce
+			b
+				position: relative
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				border: none
+				margin: 0
+				top: 0
+				padding-top: 8px
+				left: auto
+				width: 10px
+				&:before
+					content: "\f107"
+	&.select2-container--open 
+		.container-select-for-table 
+			.select2-selection__arrow b
+				color: #4d69d7
+				&:before
+					display: block
+					transform: rotate(180deg)
+	.dropdown-select-for-table
+		top: 10px
+		border: none
+		border-radius: inherit
+		.select2-results>.select2-results__options
+			max-height: 100%
+			overflow: inherit
+			width: 235px
+			height: auto
+			top: 35px
+			left: 0
+			margin: 0
+			padding: 0
+			list-style: none
+			background: #ccc
+			border-radius: 5px
+			border: 1px solid rgba(222, 225, 230, 0.81)
+			background-color: #ffffff
+			color: #bec4ce
+			li
+				font-size: 11px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				padding: 9px 10px
+				border-bottom: 1px solid rgba(222, 225, 230, 0.81)
+				&:hover
+					color: $bluey-grey
+					background-color: none
+				&:active
+					color: $cornflower-blue
+				img
+					width: 24px
+					margin-right: 15px
+
+		.select2-results__option[aria-selected=true]
+			background: none
+			color: $cornflower-blue
+		.select2-results__option--highlighted[aria-selected]
+			background-color: transparent
+			color: $cornflower-blue
+
+
+	.dropdown-select-for-city, .dropdown-select-for-city-mini
+		width: 360px!important
+		left: -85px
+		border: none
+		border-radius: inherit
+		padding: 30px
+		border-radius: 5px
+		border: 1px solid rgba(222, 225, 230, 0.81)
+		background: #fff
+		.select2-search--dropdown
+			padding: 0
+			.titleCity
+				display: block
+				font-family: $font
+				font-size: 14px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $charcoal-grey
+				margin-bottom: 20px
+			hr.lineGrad
+				margin-top: 19px
+				margin-bottom: 17px
+			.select2-search__field
+				width: 300px
+				height: 36px
+				border-radius: 6px
+				border: 1px solid #f2f4f7
+				border-radius: 5px
+				z-index: 3
+				padding: 12px 10px
+				background: url('../img/icon-search.svg') no-repeat, rgba(242,244,247,.29)
+				background-position: 95% 10px
+				&::placeholder
+					font-size: 12px
+					font-weight: 500
+					color: $cloudy-blue
+
+		.select2-results .select2-results__option
+			max-height: 100%
+			overflow: inherit
+			width: 100%
+			height: auto
+			top: 35px
+			left: 0
+			margin: 0
+			padding: 0
+			list-style: none
+			background-color: #ffffff
+			color: #bec4ce
+			.select2-results__group
+				font-size: 14px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $charcoal-grey
+				padding: 0
+				margin-bottom: 14px
+			.select2-results__options--nested
+				margin-bottom: 13px
+			li
+				font-size: 12px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: #a8b4bf
+				padding: 0
+				padding-bottom: 9px
+				&:last-child
+					padding-bottom: 0
+				&:hover
+					color: $bluey-grey
+					background-color: none
+				&:active
+					color: $cornflower-blue
+		.select2-results__option[aria-selected=true]
+			background: none
+			color: $cornflower-blue
+		.select2-results__option--highlighted[aria-selected]
+			background-color: transparent
+			color: $cornflower-blue
+
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple
+	border-radius: 5px
+.select2-dropdown
+	background: none
+.select2-container
+	width: auto!important
+.select2-container--default 
+	.dropdown-select-for-month 
+		border: none
+		border-radius: 5px
+		border: 1px solid rgba(222, 225, 230, 0.81)
+		background: #fff
+		&.select2-dropdown--below
+			top: 10px
+		&.select2-dropdown--above
+			top: -10px
+		.select2-results 
+			.select2-results__option
+				font-size: 11px
+				font-weight: 300
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $cloudy-blue
+				padding: 9px 10px
+				border-bottom: 1px solid rgba(222, 225, 230, 0.81)
+				&:last-child
+					border-bottom: none
+				&:hover
+					color: $bluey-grey
+					background-color: none
+				&:active
+					color: $cornflower-blue
+		.select2-results__option[aria-selected=true]
+			background: none
+			color: $cornflower-blue
+		.select2-results__option--highlighted[aria-selected]
+			background-color: transparent
+			color: $cornflower-blue
+	.dropdown-select-for-city-mini
+		width: 230px !important
+		height: 267px
+		padding: 12px 14px 14px 14px
+		overflow: hidden
+		left: -85px
+		background: #fff
+		.select2-search--dropdown 
+			.titleCity
+				font-size: 12px
+				margin-bottom: 9px
+				color: $charcoal-grey
+			.select2-search__field
+				width: 200px
+		.select2-results>.select2-results__options
+			max-height: 150px
+	.select2-selection--single
+		border: none
+		outline: none
+		height: 10px
+		.select2-selection__rendered
+			padding-right: 0
+			padding-left: 0px
+			border: none
+			font-size: 16px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			letter-spacing: normal
+			color: $bluey-grey
+			float: left
+			line-height: 1
+			&:hover
+				color: #818794
+		.select2-selection__arrow 
+			display: inline-block
+			position: relative
+			width: auto
+			margin-left: 7px
+			color: #bec4ce
+			top: 0
+			b
+				position: relative
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				border: none
+				margin: 0
+				top: 0
+				left: auto
+				width: 10px
+				vertical-align: top
+				&:before
+					content: "\f107"
+.select2-container--default.select2-container--open 
+	.select2-selection--single 
+		.select2-selection__arrow 
+			b
+				color: #4d69d7
+				&:before
+					display: block
+					transform: rotate(180deg)
+					
+				
+.page
+	background: $pale-grey
+.section
+	p
+		margin-bottom: 0
+	h3
+		display: inline-block
+		margin: 0
+		font-size: 16px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 7px
+		img
+			margin-right: 15px
+			width: 34px
+		
+	.statusUp, .statusDown
+		width: auto !important
+		font-size: 16px
+		margin-right: 8px
+		margin-left: 0
+	.head-title
+		display: inline-block
+	.title-wrap
+		padding: 25px 30px
+		padding-bottom: 0
+		&>img
+			vertical-align: baseline
+			margin-right: 15px
+			width: 34px
+	
+	.info
+		display: block
+		font-size: 12px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #959ba5
+		//margin-bottom: 28px
+		.date
+			position: relative
+			color: #787f8b
+			font-weight: 500
+			padding-right: 5px
+		.time
+			color: #8a919d
+			font-weight: 500
+
+	.btnOpen
+		position: relative
+		top: 6px
+		width: 120px
+		height: 34px
+		border-radius: 6px
+		background-color: transparent
+		border: 1px solid rgba(222, 225, 230, 0.81)
+		font-size: 12px
+		font-weight: 300
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: center
+		cursor: pointer
+		color: $bluey-grey
+		
+		outline: none
+		float: right
+	
+	.selectBox
+		float: right
+		position: relative
+		display: inline-block
+		width: 161px
+		height: 33px
+		border-radius: 5px
+		border: 1px solid rgba(222, 225, 230, 0.81)
+		background-color: #fff
+		padding-top: 10px
+		padding-left: 10px
+		line-height: 0
+		cursor: pointer
+		margin-top: 5px
+		&>div
+			height: 100%
+		&.active
+			.selectMenuBox
+				display: block
+			.fa-angle-down
+				color: $cornflower-blue
+				transform: rotate(180deg)
+		.fa-angle-down
+			color: $cloudy-blue
+			position: absolute
+			top: 8px
+			right: 10px
+		.valueTag
+			display: inline-block
+			font-size: 11px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $bluey-grey
+		.selectMenuBox
+			position: absolute
+			display: none
+			width: 100%
+			height: auto
+			top: 36px
+			left: 0
+			margin: 0
+			padding: 0
+			list-style: none
+			z-index: 10
+			border-radius: 5px
+			border: 1px solid rgba(222, 225, 230, 0.81)
+			background-color: #ffffff
+			.option
+				font-size: 11px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				padding: 9px 10px
+				color: $cloudy-blue
+				border-bottom: 1px solid rgba(222, 225, 230, 0.81)
+				&:hover
+					color: $bluey-grey
+				&:active
+					color: $cornflower-blue
+
+	.rectInput
+		min-width: 90px
+		width: auto	
+		height: 34px
+		position: relative
+		display: inline-block
+		.sign
+			display: inline-block
+			width: 32px
+			background: rgba(190, 196, 206, 0.14)
+			border-radius:  0 8px 8px 0
+			text-align: center
+			line-height: 2.6
+			color: #c1c5cb
+			font-size: 14px
+			border: 1px solid #e3e6eb
+			border-left: none
+			height: 34px
+
+		input
+			font-size: 14px
+			width: 34px
+			height: 100%
+			float: left
+			border-radius: 8px 0 0 8px
+			//border: 1px solid $pale-grey
+			text-align: left
+			outline: none
+			padding: 0
+			padding-left: 10px
+			border: 1px solid #e3e6eb
+			border-right: none
+			color: #2c333d
+		.input-buffer
+			position: absolute
+			top: -1000px
+			left: -1000px
+			visibility: hidden
+			white-space: nowrap
+			letter-spacing: 0.05em	
+	.block
+		margin-bottom: 30px
+	.blockBOX
+		position: relative
+		background: #fff
+		border-radius: 10px
+		height: 100%
+		box-shadow: 0 20px 20px 0 rgba(49, 57, 67, 0.04)
+		.iconBlock
+			position: relative
+			float: right
+			margin-top: 6px
+			color: rgba($cloudy-blue, 0.56)
+			font-size: 25px
+		.content
+			padding: 25px 30px
+			padding-bottom: 25px
+		.link
+			a
+				font-size: 14px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: right
+				color: $bluey-grey
+				text-decoration: none
+				border-bottom: 1px dashed $bluey-grey
+		.linecourseBox
+			margin-top: 14px
+
+		.resultConvert
+			font-size: 30px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+		.boxConvert	
+			position: relative
+			.box
+				position: relative
+			.box2
+				padding-top: 20px
+			.rate
+				display: block
+				font-size: 13px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $cloudy-blue
+				margin-top: 18px
+				margin-bottom: 12px
+			.select2-container--default 
+				width: 165px!important
+				.container-select-for-table 
+					.select2-selection__rendered 
+						.descrFlag
+							font-size: 16px
+		.refreshBtn
+			position: absolute
+			top: 112px
+			right: -6px
+			background: none
+			width: 45px
+			height: 45px
+			border: none
+			outline: none
+			border-radius: 50%
+			box-shadow: 0 20px 20px 0 rgba(49, 57, 67, 0.04)
+			background-color: $cornflower-blue
+			cursor: pointer
+			line-height: 0
+			&:hover img
+				animation: spin 4s linear infinite
+			@keyframes spin 
+				100% 
+					transform: rotate(360deg)
+		.courseBox
+			margin: 30px 4px
+		.dynamicsCourse 
+			h3
+				margin-bottom: 13px
+
+		.courseBox
+			.boxInfo
+				display: inline-block
+				text-align: left
+				&.active
+					border-radius: 8px
+					background-color: rgba($pale-grey, 0.7)
+					margin: 0 58px
+					padding: 19px 29px
+					margin-left: 65px
+					.date
+						color: $cloudy-blue
+				.date
+					font-size: 11px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $charcoal-grey
+				.status
+					font-size: 20px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $charcoal-grey
+					padding-top: 5px
+					.statusUp, .statusDown
+						margin-right: 11px
+						height: 14px
+						vertical-align: baseline
+					span
+						font-weight: 100
+						color: $cloudy-blue
+				.oneUnit
+					font-size: 11px
+					font-weight: 300
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $charcoal-grey
+				.statusValue
+					font-size: 11px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $cloudy-blue
+					margin-top: 5px
+		.courseBoxMini
+			padding-top: 28px
+			margin: 0 31px
+			padding-bottom: 24px
+			display: inline-block
+			.boxInfo.active	
+				margin: 0	
+				text-align: left
+				margin-right: 30px
+				padding: 26px 32px
+				.statusValue
+					margin-top: 5px
+			.boxInfo
+				text-align: left
+				float: left
+				padding-top: 7px
+				.date
+					color: $bluey-grey
+				.status
+					line-height: 1.1
+				.statusValue
+					margin-top: 0
+				&:nth-child(3)
+					padding-top: 13px
+
+		.exchangeBox
+			.head
+				margin-bottom: 17px
+				margin-top: 23px
+				b
+					font-weight: normal
+			.rowInfo
+				margin-bottom: 12px
+				.rectInput
+						.sign
+							height: 100%
+				&.sell
+					margin-bottom: 16px
+					.rectInput
+						margin-left: 22px
+
+				.info
+					display: inline-block
+					font-size: 14px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: #2c333d
+					
+					a
+						text-decoration: none
+						color: $bluey-grey
+						border-bottom: 1px dashed $bluey-grey
+				.rectInput
+					margin: 0 5px
+					margin-left: 12px
+					input
+						min-width: auto
+						width: 56px
+						max-width: 80px
+					.sign
+						width: 34px
+			
+		.dynamicsCourse
+			.chart-m
+				height: 200px
+			.link
+				margin-bottom: 6px
+			.info
+				font-size: 11px
+			.selectBox
+				width: 80px	
+				margin-top: 0
+				top: -6px
+			&.box1
+				padding-bottom: 0
+				margin-top: 34px
+				&:after
+					display: none
+
+
+	
+	.profitableInfo
+		float: left
+		font-size: 12px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		letter-spacing: normal
+		color: $cloudy-blue
+		margin-bottom: 5px
+		margin-top: 30px
+		img
+			margin-right: 9px
+		.accent
+			border-radius: 6px
+			background-color: rgba($cloudy-blue, 0.15)
+			padding: 5px
+			margin: 0 5px
+			font-weight: 300
+			white-space: nowrap
+		.text
+			vertical-align: middle
+
+	
+	.exchange
+		position: relative
+		margin: 0 31px
+		margin-top: 54px
+		float: left
+		margin-bottom: 20px
+		.selectBox
+			width: auto
+			float: left
+			padding: 0
+			border: none
+			background: none
+			margin: 0
+			margin-right: 54px
+			z-index: 3
+			.fa
+				position: relative
+				top: 0
+				right: 0
+			.valueTag
+				display: inline-block
+				font-size: 18px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: 2
+				letter-spacing: normal
+				color: $charcoal-grey
+		.select2-container--default 
+			width: 165px!important
+			float: right
+			.container-select-for-table 
+				.select2-selection__rendered 
+					.descrFlag
+						font-size: 16px
+
+		.wrapRange
+			float: left
+			position: relative
+			display: block
+			.range-count
+				position: relative
+				display: inline-block
+			.rectinfo
+				position: absolute
+				top: -23px
+				display: block
+				font-size: 11px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $bluey-grey
+			.value-range
+				display: inline-block
+				font-size: 26px
+				font-weight: 300
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				margin-bottom: 12px
+				color: $charcoal-grey
+				&:before
+					content: '$ '
+			.noUi-base, .noUi-connects
+				padding-top: 10px
+			.noUi-horizontal
+				width: 320px
+				height: 20px
+				box-shadow: none
+				margin: 0 auto
+				
+			.noUi-target
+				position: relative
+				border: none
+				border-radius: 0
+				background: transparent
+				display: block
+				&:before
+					position: absolute
+					content: ''
+					top: 10px
+					left: 0
+					width: 100%
+					height: 1px
+					background: linear-gradient(to right, transparent, rgba(222, 225, 230, 0.81), transparent)
+			.noUi-connect
+				border-radius: 0
+				height: 1px
+				background: linear-gradient(to right, transparent, rgb(77, 105, 215))
+
+			.noUi-handle
+				border: none
+				top: 0
+				outline: none
+				position: absolute
+				z-index: 2
+				width: 20px
+				height: 20px
+				background: rgb(77, 105, 215)
+				border-radius: 50%	
+				border: none
+				box-shadow: none
+				box-shadow: 0 8px 12px 0 rgba(77, 105, 215, 0.2)
+				&:before
+					display: block
+					height: auto
+					width: auto
+					position: absolute
+					top: 6px
+					right: 6px
+					bottom: 6px
+					left: 6px
+					content: ""
+					background-color: #fff
+					border-radius: inherit
+				&:after
+					display: none	
+
+	.exchangeBank
+		padding-top: 31px
+		margin: 0 31px
+		.profitableInfo
+			margin-top: 10px
+		.rowInfo
+			position: relative
+			font-size: 18px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+			margin-bottom: 15px
+			.info
+				display: inline-block
+				font-size: 18px
+				color: $charcoal-grey
+				img
+					margin-right: 15px
+			.price
+				color: $bluey-grey
+				float: right
+				margin-right: 20px
+				margin-top: 10px
+			.rectInput
+				position: relative
+				width: 263px
+				height: 41px
+				margin-left: 47px
+				input
+					min-width: 228px
+					text-align: left
+					padding-left: 10px
+				.sign
+					height: 100%
+					line-height: 2.9
+			.rectInput1
+			.rectInput2
+				margin-left: 54px
+.bank
+	.title-wrap > img
+		vertical-align: top
+		margin-top: 7px
+		width: 24px
+	.btnOpen
+		background: rgba(242, 244, 247, 0.29)
+	.descr-wrap2
+		margin-left: 52px	
+	.descr-wrap3
+		margin-left: -21px	
+.wrapperBank
+	padding-top: 29px
+	padding-bottom: 10px
+	margin: 0 31px
+	.lineGrad
+		display: none
+	p
+		position: relative
+		margin-bottom: 18px
+	p, a
+		font-size: 16px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $charcoal-grey		
+		text-decoration: none
+		.descr
+			display: block
+			font-size: 12px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: #959ba5
+			margin-bottom: 5px
+		.boxValue
+			position: absolute
+			right: 130px
+			top: 2px
+			border-radius: 6px
+			padding: 10px 12px
+			font-size: 12px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: center
+		.boxValueUp
+			color: $tea
+			background-color: rgba(90, 181, 111, 0.15)
+		.boxValueDown
+			color: $coral-pink
+			background-color: rgba(245, 104, 112, 0.15)
+	a
+		color: $cornflower-blue	
+	
+.infoPage
+	.section 
+		.title-wrap >img
+			width: auto
+		.text
+			margin: 28px 31px
+			h3
+				margin-bottom: 14px
+			p
+				font-size: 14px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: 1.6
+				letter-spacing: normal
+				color: $charcoal-grey
+				margin-bottom: 15px
+	.tableInfoMob
+		display: none
+	.tableInfo
+		padding-top: 11px
+		margin-left: 31px
+		margin-right: 31px
+		.tableRow
+			.tableTd
+				width: 50%
+				padding-top: 13px
+				vertical-align: top
+				display: inline-block
+				float: left
+				&:first-child
+					font-size: 14px
+					font-weight: 300
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $bluey-grey
+
+				&:last-child
+					font-size: 14px
+					font-weight: 300
+					font-style: normal
+					font-stretch: normal
+					letter-spacing: normal
+					color: $charcoal-grey
+					line-height: 1.43
+
+				a
+					text-decoration: none
+					color: $bluey-grey
+
+	.wrapperSlider
+		margin-top: 23px
+		margin-left: 0
+		.btnTurn
+			position: absolute
+			bottom: 50px
+			left: 50%
+			margin-left: -70px
+			width: 140px
+			height: 30px
+			border: none
+			border-radius: 4px
+			background-color: rgba($cornflower-blue, 0.48)
+			font-size: 11px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: #ffffff
+			cursor: pointer
+			z-index: 23
+			&:hover
+				background-color: rgba($cornflower-blue, 1)
+
+		.nav-slider
+			padding: 0
+			margin-bottom: 20px
+			margin-left: 30px
+			li
+				display: inline-block
+				width: 62px
+				height: 28px
+				background-color: $pale-grey
+				text-align: center
+				padding-top: 3px
+				margin-left: 6px
+				border-radius: 6px
+				&:first-child
+					margin-left: 0
+				&.active 
+					background-color: rgba(77, 105, 215, 0.14)
+					a
+						color: $cornflower-blue
+						border-radius: 6px
+				&:hover
+					background-color: #e9eef2 
+					a
+						color: #a4acb9
+						border-radius: 6px
+			a
+				display: block
+				text-decoration: none
+				color: $cloudy-blue
+
+		.owl-theme 
+			.owl-nav
+				position: absolute
+				top: 42%
+				width: 100%
+				margin-top: 0
+		.owl-carousel 
+			.owl-nav 
+				button
+					position: absolute
+					width: 30px
+					height: 30px
+					border-radius: 4px
+					box-shadow: 0 8px 12px 0 rgba(77, 105, 215, 0.2)
+					background-color: $cornflower-blue
+					outline: none
+					.fa
+						color: #fff
+
+			.owl-nav button.owl-next
+				right: 10px
+			.owl-nav button.owl-prev
+				left: 10px
+
+		.slider	
+			margin-bottom: 31px
+			.item
+				width: 495px
+				height: 200px
+				border-radius: 6px
+				background-color: #f5f6f8
+				margin: 0 auto
+				padding-top: 28px
+				.flip-container 
+					width: 332px
+					height: 146px
+					perspective: 1000
+					margin: 0 auto
+				&.active .flipper 
+					transform: rotateY(180deg)
+				.flipper 
+					transition: 0.6s
+					transform-style: preserve-3d
+					position: relative
+				.front, .back 
+					width: 332px
+					height: 146px
+					backface-visibility: hidden
+					position: absolute
+					top: 0
+					left: 0
+				.front 
+					z-index: 2
+				.back 
+					transform: rotateY(180deg)
+
+
+
+// CHART STYLE
+.chart-xl
+	width: 100%
+	height: 330px
+.chart-lg
+	width: 100%
+	height: 325px
+.chart-m
+	width: 100%
+	height: 215px
+
+.chartTooltip2
+	opacity: 0
+.chartTooltip
+	span
+		display: block
+		font-size: 10px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+	p
+		font-family: $default-font
+		font-size: 10px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: $charcoal-grey
+		margin-bottom: 5px
+		.value
+			display: inline-block
+		.buy
+			color: $cornflower-blue
+		.sell
+			color: $cloudy-blue
+	.data
+		color: $cloudy-blue
+	.value
+		color: $cornflower-blue
+
+
+.chart
+	hr.lineFull
+		margin-top: 0
+	.chart-wr
+		.rowInfo
+			margin-bottom: 10px
+			h3
+				font-weight: 300
+	.nav-chart
+		padding: 0
+		margin: 0
+		margin-bottom: 15px
+		br
+			display: none
+		li
+			display: inline-block
+			min-width: 60px
+			height: 28px
+			font-size: 12px
+			background-color: $pale-grey
+			text-align: center
+			line-height: 28px
+			border-radius: 6px
+			margin-left: 16px
+			padding: 0 10px
+			text-decoration: none
+			color: $cloudy-blue
+			&:first-child
+				margin-left: 0
+			&:hover 
+				background-color: #e9eef2
+				color: #a4acb9
+			&.active, &.active 
+				color: $cornflower-blue
+				background-color: rgba(77, 105, 215, 0.14)
+				border-radius: 6px
+			&:hover 
+				background-color: #e9eef2
+				border-radius: 6px
+		
+			
+	.rowInfo
+		.statwrap
+			display: inline-block
+			margin-left: 10px
+			.status
+				position: relative
+				display: inline-block
+				font-size: 14px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $bluey-grey
+				&:first-child
+					&:after
+						content: ''
+						height: 20px
+						float: right
+						border: 1px solid rgba(193, 197, 203, 0.74)
+						margin: 0 16px
+				span
+					font-weight: normal
+					color: rgba(193, 197, 203, 0.74)
+
+.wrapperForChart
+	.row
+		margin-right: -16px
+	.table_id
+		position: relative
+		padding-bottom: 0 !important
+	.dataTables_wrapper
+		&:before
+			position: absolute
+			content: ''
+			width: 1px
+			height: 100%
+			background: $pale-grey
+			top: 0
+			left: -1px
+.wrapperForChart
+	position: relative
+	.chart-wr
+		margin-left: 31px	
+		h3
+			font-size: 14px
+			font-weight: normal
+		.nav-chart
+			margin-top: 15px
+			margin-bottom: 12px
+
+	.table_id tbody td:first-child
+		font-weight: normal
+	.table_id tbody tr:hover
+		background-color: rgba(77, 105, 215, 0.1)
+	.status
+		position: relative
+		display: inline-block
+		font-size: 14px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: $bluey-grey
+		margin-left: 15px
+		&.active
+			color: $tea
+		&:first-child
+			&:after
+				content: ''
+				height: 100%
+				border: 1px solid rgba(193, 197, 203, 0.74)
+				margin: 0 16px
+		span
+			font-weight: normal
+			color: rgba(193, 197, 203, 0.74)
+	
+	.infoDelay
+		margin-left: 30px
+		margin-right: 30px
+		margin-bottom: 30px
+		font-size: 12px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		letter-spacing: normal
+		text-align: center
+		color: #c1c5cb
+		text-align: left
+		
+		img
+			width: 17px
+			height: 17px
+			margin-right: 5px
+
+
+
+@import "dataTable"
+@import "landing"
+@import "media"

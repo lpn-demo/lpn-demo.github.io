@@ -1,0 +1,34 @@
+<!-- MAPBOX -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.0/mapbox-gl-geocoder.min.js'></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.0/mapbox-gl-geocoder.css' type='text/css' />
+<!-- MAPBOX -->
+
+<!-- AmChart -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="http://www.amcharts.com/lib/4/lang/ru_RU.js"></script>
+<!-- AmChart -->
+
+
+<!--JS libs -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/DataTables/datatables.min.js"></script>
+	<script src="libs/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+
+	<script src="libs/nouislider/nouislider.min.js"></script>
+<!--JS libs end-->
+
+<!--My JS  -->
+	<script src="js/map.js"></script>
+	<script src="js/range.js"></script>
+	<script src="js/slider.js"></script>
+
+
+	<script src="js/amChart.js"></script>
+	<script src="js/dataTable.js"></script>
+
+	<script src="js/common.js"></script>
+<!--My JS  -->

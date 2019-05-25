@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Platora</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- AmChart -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/lang/ru_RU.js"></script>
+    <!-- AmChart -->
+
+
+    <!-- MAPBOX -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet'
+          href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.0/mapbox-gl-geocoder.css'
+          type='text/css'/>
+    <!-- MAPBOX -->
+
+
+    <!--JS libs -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    <script src="libs/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="libs/scroll/perfect-scrollbar.jquery.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+
+    <!--JS libs end-->
+
+    <!--My JS  -->
+
+    <script src="js/amChart_page5.2.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/dataTable.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--My JS  -->
+
+
+</head>
+
+<body class="page page5">
+
+<div id="bg"></div>
+<div class="preloader">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<!-- Header -->
+<header>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <a href="#" class="logo"><img src="img/logo.png"></a>
+
+                    <button class="openMenu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <ul class="nav-menu">
+                        <a href="#" class="logo logoMob"><img src="img/logo.png"></a>
+                        <button class="closeMenu"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <li ><a href="page1.html">Курсы валют</a></li>
+                        <li ><a href="page2.html">Курсы банков</a></li>
+                        <li class="active"><a href="page4.html">Выгодный обмен</a></li>
+                        <li><a href="page6.html">Рейтинги банков</a></li>
+                        <div class="time timeMob">
+                            <hr class="lineGrad">
+                            <span>Среда 12.12.2018</span>
+                            12:49, UTC +3 (MSK)
+                        </div>
+                    </ul>
+
+                    <div class="heade-right">
+                        <div class="local">
+                            <span><img src="img/icon-location.svg"><b>Выберите город</b></span>
+                            <select class="select-city"></select>
+                        </div>
+
+                        
+                        <div class="time">
+                            <span>Среда 12.12.2018</span>
+                            12:49, UTC +3 (MSK)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- Header End -->
+
+<!-- Main -->
+<div class="main">
+    <div class="container">
+
+        <div class="breadcrumbWrapper">
+            <ul class="breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Курсы валют</a></li>
+                <li><a href="#">Курсы банков</a></li>
+                <li><a href="#">Обмен валют</a></li>
+                <li class="active"><a href="#">Банк</a></li>
+            </ul>
+        </div>
+
+
+        <!-- description-page -->
+        <div class="description-page description-page-top">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Банк</h2>
+                    <p>Курс обмена валюты в банках и обменных пунктах меняется в течение дня и зависит от новостей на
+                        финансовом рынке, а также от котировок валют. В этом разделе вы найдете полную информацию о
+                        наиболее выгодных курсах обмена доллара и евро на сегодня в банках.</p>
+                </div>
+            </div>
+        </div>
+        <!-- description-page END-->
+
+        <!-- SECTION 1 ...................................................... -->
+        <div class="section section1 bank">
+            <div class="row">
+                <div class="col-md-12 block">
+
+                    <div class="blockBOX">
+                        <div class="title-wrap">
+                            <img src="img/Icon-Bank.svg">
+                            <div class="head-title">
+                                <h3>Альфа-Банк</h3>
+                                <p class="info">Занимает 6 место в рейтинке банков РФ</p>
+                            </div>
+                            <button class="btnOpen requisitesBtn" data-toggle="modal" data-target="#requisites">
+                                Реквизиты
+                            </button>
+                        </div>
+                        <hr class="lineFull">
+                        <div class="wrapperBank">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="descr-wrap1 descr-wrapB">
+                                        <p>
+                                            <span class="descr">Наименование банка</span>
+                                            АО “Альфа-Банк”
+                                        </p>
+                                        <p>
+                                            <span class="descr">Дата регистрации</span>
+                                            03.01.1991
+                                        </p>
+                                        <p>
+                                            <span class="descr">Генеральная лицензия Банка России</span>
+                                            № 1326 от 16.01.2015
+                                        </p>
+                                        <p>
+                                            <span class="descr">Уставный капитал</span>
+                                            59,6 млдр. рублей
+                                        </p>
+                                        <hr class="lineGrad">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <div class="descr-wrap2 descr-wrapB">
+                                        <p>
+                                        <td><span class="descr">Активы нетто</span>3,2 трлн. рублей <span
+                                                class="boxValue boxValueUp">+1,11%</span></td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Депозиты</span>987,7 млрд. рублей <span
+                                                class="boxValue boxValueUp">+4,11%</span></td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Кредиты</span>2 трлн. рублей <span
+                                                class="boxValue boxValueDown">-2,43%</span></td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Чистая прибыль</span>1, 739 млрд. рублей <span
+                                                class="boxValue boxValueDown">-1,23%</span></td>
+                                        </p>
+                                        <hr class="lineGrad">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="descr-wrap3 descr-wrapB">
+                                        <p>
+                                        <td><span class="descr">Головной офис</span>103190, г.Москва, ул. Каланчевская,
+                                            д.21
+                                        </td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Телефоны</span>8 (800) 200-00-00, +7 (495) 323-23-44
+                                        </td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Сайт</span><a href="#">www.alfabank.ru</a></td>
+                                        </p>
+                                        <p>
+                                        <td><span class="descr">Уставный капитал</span><a href="#">info@alfabank.ru</a>
+                                        </td>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 ......................................................END-->
+
+        <!-- SECTION 2  ................................................................................................... -->
+        <div class="section section2">
+            <div class="row">
+                <div class="col-lg-8 block">
+
+                    <div class=" blockBOX">
+                        <div class="title-wrap">
+                            <div class="head-title">
+                                <h3>Курс обмена Доллара США в Альфа-банке</h3>
+                                <p class="info">Cегодня: <span class="date">19.01.2019</span></p>
+                            </div>
+                        </div>
+
+                        <hr class="lineFull">
+                        <div class="exchangeBank">
+
+                            <div class="rowInfo buy">
+                                <span class="info"><img src="img/IconPayment.svg">Альфа-банк покупает </span>
+                                <div class="rectInput rectInput1"><input type="text" value="100"><span class="sign"><i
+                                        class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                <span class="price">
+							за 650 900 ₽
+						</span>
+                            </div>
+                            <div class="rowInfo buy">
+                                <span class="info"><img src="img/IconPaymentMinus.svg">Альфа-банк продает  </span>
+                                <div class="rectInput rectInput2"><input type="text" value="100"><span class="sign"><i
+                                        class="fa fa-usd" aria-hidden="true"></i></span></div>
+                                <span class="price">
+							за 650 900 ₽
+						</span>
+                            </div>
+                            <div class="profitableInfo">
+                                <img src="img/icon-shape.svg" alt="">
+                                Сегодня выгодный курс для покупки Доллара США в Сбербанке <span
+                                    class="accent">67,20 ₽ </span> за 1 $
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 block">
+                    <div class=" blockBOX">
+                        <div class="title-wrap">
+                            <div class="head-title">
+                                <h3>Курс Центрального банка РФ</h3>
+                                <p class="info">На сегодня:<span class="date">12.12.2018</span>| обновлён в <span
+                                        class="time">12:34</span></p>
+                            </div>
+                        </div>
+                        <hr class="lineFull">
+                        <div class="courseBox box courseBoxMini">
+                            <div class="courseBoxMiniWrap">
+                                <div class="boxInfo active">
+                                    <div class="date">сегодня: 12.12.2018</div>
+                                    <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">66.34
+                                        <span>₽</span></div>
+                                    <span class="oneUnit">за 1 доллар</span>
+                                    <div class="statusValue">+ 0.5 RUB (0,005%)</div>
+                                </div>
+                                <div class="boxInfo">
+                                    <div class="date">Вчера</div>
+                                    <div class="status"><img class="statusDown" src="img/icon-arrow-red.svg" alt="">65.90
+                                        <span>₽</span></div>
+                                    <div class="statusValue">- 1.2 RUB (0,008%)</div>
+                                </div>
+                                <div class="boxInfo">
+                                    <div class="date">Завтра</div>
+                                    <div class="status"><img class="statusUp" src="img/icon-arrow-green.svg" alt="">67.52
+                                        <span>₽</span></div>
+                                    <div class="statusValue">+ 3.2 RUB (0,040%)</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2 ...................................................................................................END -->
+
+        <!-- SECTION 3  MAP............................................................................................-->
+
+        <div class="myTable section MAP">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="title-wrap">
+                        <div class="head-title">
+                            <h3>Обмен валюты в отделениях Альфа-банк в <select class="select-city-mini"></select></h3>   
+                        </div>
+                    </div>
+
+                    <table class="nowrap table_id hoverTable" id="table_id_9">
+                        <thead>
+                        <tr>
+                            <th>Адрес</th>
+                            <th>Телефон</th>
+                            <th>Часы работы</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Коммунаров, д. 12</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Коммунаров, д. 12</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар, ул. Мира, д. 17</td>
+                            <td>+7 (861) 229-23-32</td>
+                            <td>пн-пт, с 09:00 до 22:00</td>
+                            <td><a class="linkMap" href="#">На карте<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <button class="showMore">Показать ещё</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3 ............................................................................................END-->
+
+
+        <!-- SECTION 4 Chart ................................................................................................... -->
+
+        <div class="myTable section chart section2">
+            <div class="title-wrap">
+                <div class="head-title">
+                    <h3>Динамика курса Доллара США</h3>
+                    <p class="info">По данным ЦБ РФ</p>
+                </div>
+                <div class="selectBox multiSelect" data-atr="chart5">
+                    <div><span id="chart5" class=valueTag>Доллар США и Евро</span> <i class="fa fa-angle-down"
+                                                                                      aria-hidden="true"></i>
+                    </div>
+                    <ul class=selectMenuBox>
+                        <li class=option>Доллар США и Евро</li>
+                        <li class=option>Доллар США</li>
+                        <li class=option>Евро</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="lineFull"></hr>
+            <div class="wrapperForChart">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="chart-wr chart-wr-mini">
+                            <ul class="nav-chart">
+                                <li class="active">Час</li>
+                                <li>День</li>
+                                <li>Неделя</li>
+                                <li>Месяц</li>
+                                <li>Квартал</li>
+                                <li>Год</li>
+                                <li>За всё время</li>
+                            </ul>
+                        </div>
+                        <!-- CHART .....................................-->
+                        <div id="chartdiv5_2" class="chart-lg"></div>
+                        <!-- CHART .....................................-->
+
+                    </div>
+
+                    <div class="col-lg-5">
+                        <table class="nowrap table_id" id="table_id_chart3">
+                            <thead>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Банк получает</th>
+                                <th>Банк прожаёт</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            <tr>
+                                <td>25.01.2019</td>
+                                <td>65,3912 P</td>
+                                <td>65,3912 P</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4  Chart ................................................................................................... -->
+        <!-- SECTION 5 Table ........................................................-->
+        <div class="myTable table6 section">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="title-wrap">
+                        <div class="head-title">
+                            <h3>Курсы обмена Доллара США в банках <select class="select-city-mini"></select></h3>
+                            <p class="info">Cегодня: <span class="date">19.01.2019</span></p>
+                        </div>
+                        <div class="selectBox multiSelect" data-atr="tabl65">
+                            <div><span id="tabl65" class=valueTag>Доллар США и Евро</span> <i class="fa fa-angle-down"
+                                                                                              aria-hidden="true"></i>
+                            </div>
+                            <ul class=selectMenuBox>
+                                <li class=option>Доллар США и Евро</li>
+                                <li class=option>Доллар США</li>
+                                <li class=option>Евро</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <table class="nowrap table_id hoverTable" id="table_id_13">
+                        <thead>
+                        <tr>
+                            <th>Название банка</th>
+                            <th>Наименование валюты</th>
+                            <th>Количество единиц</th>
+                            <th>Банк покупает</th>
+                            <th>Банк продаёт</th>
+                            <th>Время обновления</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>СМП Банк</td>
+                            <td>
+                                <select class="select-for-table"></select>
+                            </td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="1">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">$</span></div>
+                            </td>
+                            <td>67.34 ₽</td>
+                            <td>84,29 ₽</td>
+                            <td>Сегодня в 12:30</td>
+                        </tr>
+                        <tr>
+                            <td>Газпромбанк</td>
+                            <td>
+                                <select class="select-for-table"></select>
+                            </td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="1">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">$</span></div>
+                            </td>
+                            <td>67.34 ₽ <i class="fa fa-bolt" aria-hidden="true"></i></td>
+                            <td>84,29 ₽</td>
+                            <td>Сегодня в 12:30</td>
+                        </tr>
+                        <tr>
+                            <td>Юниккредит Банк</td>
+                            <td>
+                                <select class="select-for-table"></select>
+                            </td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="1">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">$</span></div>
+                            </td>
+                            <td>67.34 ₽</td>
+                            <td>84,29 ₽</td>
+                            <td>Сегодня в 12:30</td>
+                        </tr>
+                        <tr>
+                            <td>ВТБ24 Банк</td>
+                            <td>
+                                <select class="select-for-table"></select>
+                            </td>
+                            <td>
+                                <div class="rectInput"><input class="input" type="text" value="1">
+                                    <div class="input-buffer"></div>
+                                    <span class="sign">$</span></div>
+                            </td>
+                            <td>67.34 ₽</td>
+                            <td>84,29 ₽ <i class="fa fa-bolt" aria-hidden="true"></i></td>
+                            <td>Сегодня в 12:30</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <button class="showMore">Показать ещё</button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SECTION 5 Table ........................................................END-->
+
+
+        <!-- description-page -->
+        <div class="description-page description-page-bottom">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Курс обмена валюты в банках и обменных пунктах меняется в течение дня и зависит от новостей на
+                        финансовом рынке, а также от котировок валют. В этом разделе вы найдете полную информацию о
+                        наиболее выгодных курсах обмена доллара и евро на сегодня в банках. Сравните показатели
+                        покупка/продажа интересующей вас валюты в разных банках.</p>
+                </div>
+            </div>
+        </div>
+        <!-- description-page END-->
+    </div>
+
+
+    <!-- Button Top -->
+    <button id="btnTop"><img src="img/iconUp.svg"></button>
+    <!-- Button Top end-->
+</div>
+<!-- Main End -->
+
+
+<!-- FOOTE ............................................................................................................ -->
+<footer>
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="logo"><img src="img/logo-footer.png"></a>
+                    <span class="copyright">Copyright © 2018-2019 Platora.<br>Все права защищены.</span>
+                    <div class="socialLink">
+                        <p>Рассказать о проекте:</p>
+                        <ul class="socials">
+                            <li><a href="##"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="##"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer1">
+                        <li>Курсы валют</li>
+                        <li><a href="#">Информация о валюте</a></li>
+                        <li><a href="#">Курс доллара США</a></li>
+                        <li><a href="#">Курс Евро</a></li>
+                        <li><a href="#">Обмен валюты</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer2">
+                        <li>Рейтинги</li>
+                        <li><a href="#">По активам</a></li>
+                        <li><a href="#">По вкладам</a></li>
+                        <li><a href="#">По кредитам</a></li>
+                        <li><a href="#">Список банкав России</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <ul class="nav-footer nav-footer3">
+                        <li>Platora</li>
+                        <li><a data-toggle="modal" data-target="#contactPop" href="#contactPop">Связаться с нами</a>
+                        </li>
+                        <li><a href="#">Стать партнером</a></li>
+                        <li><a href="#">Техническая поддержка</a></li>
+                        <li><a href="#">Список банкав России</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="lineGrad">
+        <div class="wrap-b">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Содержание сайта platora.ru не является офертой или рекомендацией к покупке / продаже каких-либо
+                        активов и носит исключительно информационно-справочный характер. Официальные курсы иностранных
+                        валют по отношению к рублю устанавливаются Центральным банком Российской Федерации без
+                        обязательства покупать или продавать указанные валюты по данному курсу. Обращаем ваше внимание,
+                        что значения курсов валют могут меняться в течение дня. Уточняйте условия обмена валют в офисах
+                        банков или по телефонам справочных служб.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTE ............................................................................................................ -->
+
+<!-- requisites pop -->
+<div class="modal fade popup" id="requisites" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content popuprequisites">
+            <div class="modal-header">
+
+                <h4>Реквизиты АО «Тинькофф Банк»</h4>
+                <button type="button" class="close closePopup" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="blockrequisites">
+                    <tbody>
+                    <tr>
+                        <td>Фирменное (полное официальное) наименование банка на русском языке</td>
+                        <td>Акционерное общество «Тинькофф Банк»</td>
+                    </tr>
+                    <tr>
+                        <td>Сокращенное фирменное наименование банка на русском языке</td>
+                        <td>АО «Тинькофф Банк»</td>
+                    </tr>
+                    <tr>
+                        <td>Фирменное (полное официальное) наименование банка на английском языке</td>
+                        <td>Tinkoff Bank</td>
+                    </tr>
+                    <tr>
+                        <td>Юридический адрес</td>
+                        <td>Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</td>
+                    </tr>
+                    <tr>
+                        <td>Почтовый адрес</td>
+                        <td>Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</td>
+                    </tr>
+                    <tr>
+                        <td>Корр. счет</td>
+                        <td>30101810145250000974 в ГУ Банка России по ЦФО</td>
+                    </tr>
+                    <tr>
+                        <td>Р/С</td>
+                        <td>30232810100000000004</td>
+                    </tr>
+                    <tr>
+                        <td>БИК</td>
+                        <td>044525974</td>
+                    </tr>
+                    <tr>
+                        <td>ИНН/КПП</td>
+                        <td>7710140679/773401001</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКПО</td>
+                        <td>29290881</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКОГУ</td>
+                        <td>1500010</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКАТО</td>
+                        <td>45283587000</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКТМО</td>
+                        <td>45372000000</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКФС</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКОПФ</td>
+                        <td>12267</td>
+                    </tr>
+                    <tr>
+                        <td>Код ОКВЭД</td>
+                        <td>64.19</td>
+                    </tr>
+                    <tr>
+                        <td>Дополнительные коды ОКВЭД для ОКПО</td>
+                        <td>29290881</td>
+                    </tr>
+                    <tr>
+                        <td>Основной регистрационный номер</td>
+                        <td>1027739642281</td>
+                    </tr>
+                    <tr>
+                        <td>Дата присвоения ОГРН</td>
+                        <td>28.11.2002 г.</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- requisites pop End-->
+
+
+<!-- MAP pop -->
+<div class="modal fade popup modal-inline-block " id="mapPop" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content mapPop">
+            <div class="modal-header ">
+                <h4>Отделения на карте</h4>
+                <button type="button" class="close closePopup" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="map"></div>
+                <div id='geocoder' class='geocoder'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAP pop End-->
+
+<!-- pop Contact  -->
+<div class="modal fade popup" id="contactPop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content contactPop">
+            <div class="modal-header">
+
+                <h4>Связатся с нами</h4>
+                <button type="button" class="close closePopup" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <hr class="lineGrad">
+            <div class="modal-body">
+                <form>
+                    <label>
+                        <p>Ваше имя</p>
+                        <input type="name" name="" placeholder="Введите ваше имя">
+                    </label>
+                    <label>
+                        <p>Ваша почта</p>
+                        <input type="email" name="" placeholder="Введите свой электронный адрес">
+                    </label>
+                    <label>
+                        <p>Тема обращения</p>
+                        <div class="selectBox themereson multiSelect" data-atr="theme">
+                            <div><span id="theme" class=valueTag>Выбирите тематику обращения</span> <i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></div>
+                            <ul class=selectMenuBox>
+                                <li class=option>Доллар США и Евро</li>
+                                <li class=option>Доллар США</li>
+                                <li class=option>Евро</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label>
+                        <p>Ваше сообщение</p>
+                        <div class="textWrap">
+                            <textarea maxlength="300" type="text" name="sessionNum" id="sessionNum"
+                                      placeholder="Напишите своё обращение к нам"></textarea>
+                            <span class="sessionNum_count"><span id="sessionNum_count">0</span>/300</span>
+                        </div>
+
+                    </label>
+
+                    <button class="send">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pop Contact  End-->
+
+
+
+</body>
+</html>

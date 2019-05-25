@@ -1,0 +1,1192 @@
+@import "vars"
+
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+	header 
+		.time
+			display: none
+		.local 
+			img
+				margin-right: 22px	
+			.select2-container--default 
+				.select2-selection--single 
+					.select2-selection__arrow 
+						display: none
+					.select2-selection__rendered
+						width: 20px
+		.local::after
+			display: none
+		.logo
+			margin-right: 0
+		.heade-right
+			margin-top: 28px
+		.nav-menu li
+			margin-left: 35px
+
+	.breadcrumbWrapper .breadcrumb
+		display: none
+	.description-page 
+		margin-top: 20px
+		h2
+			font-size: 20px
+			margin-bottom: 10px
+		p
+			font-size: 14px
+	.select2-container--default .dropdown-select-for-city, .select2-container--default .dropdown-select-for-city-mini
+		left: -217px
+	.select2-container--default 
+		.dropdown-select-for-city-mini
+			left: -28px
+	.myTable.courseBank 
+		.link 
+			.hide
+				display: none
+
+	.myTable 
+		.btn-gr 
+			.btn 
+				width: 50px
+				font-weight: 100
+				display: inline-block
+				line-height: 0	
+				.iconDollar, .iconEUR
+					display: none
+				
+			.buy
+				margin-right: 7px
+				&:before
+					position: relative
+					content: "+"
+					color: #fff
+					font-size: 25px	
+			.sell
+				&:before
+					position: relative
+					content: "\2013"
+					color: #fff
+					font-size: 25px
+	.myTable.table11_1
+		.table_id
+			thead
+				th:last-child
+					display: none
+			tbody 
+				.phoneNumber
+					display: none
+				.btn-gr
+					padding-top: 10px
+					display: block
+					.btn
+						background: #e5e8ec
+					.call
+						margin-right: 10px
+				td:nth-child(7)
+					padding: 0 14px
+				td:last-child
+					display: none
+
+	.section 
+		.blockBOX 
+			.courseBox 
+				.boxInfo
+					margin: 0
+				.boxInfo.active
+					margin: 0
+					padding: 19px 17px
+					margin-left: 28px
+					margin-right: 27px
+			.courseBoxMini
+				margin-right: 25px
+				.boxInfo
+					margin: 0
+					.status
+						padding-top: 8px
+				.boxInfo.active
+					margin: 0
+					padding: 28px 13px
+					margin-right: 15px
+			.exchangeBox 
+				.head
+					h3
+						white-space: nowrap
+						.select2-container--default 
+							.select2-selection--single
+								background: none
+				.rowInfo 
+					.info	
+						.hide
+							display: none
+			.exchangeBank 
+				margin-right: 9px
+				.rowInfo 
+					.rectInput 
+						width: 180px
+						margin-left: 37px
+						input
+							min-width: 145px
+					.rectInput2
+						margin-left: 44px
+		.exchange .select2-container--default
+			margin-top: -60px			
+		&.bank 
+			.descr-wrap2
+				margin-left: 36px
+		.wrapperBank 
+			p, a
+				white-space: nowrap
+				.boxValue
+					right: 60px
+	.infoPage
+		.margin-top
+			margin-top: 30px
+			height: auto
+		.tableInfo
+			padding-bottom: 20px
+			.part
+				display: inline-block
+				float: left
+			.first-part
+				width: 43%
+				.tableTd:last-child
+					padding-left: 73px
+			.second-part
+				width: 57%
+				padding-bottom: 30px
+		.wrapperSlider 
+			margin-bottom: 25px
+			.nav-slider
+				margin-right: 28px
+				li
+					width: 108px
+					margin-left: 17px
+					&:last-child
+
+			.slider 
+				margin-bottom: 0
+				.item
+					width: 94%
+					height: 264px
+
+					.flip-container 
+						width: 379px
+						.front, .back
+							width: 379px
+						.btnTurn
+							bottom: -70px		
+	.chart 
+		.nav-chart 
+			li
+				padding: 0 12px
+			li:last-child
+				display: none
+		.chart-wr-mini
+			.nav-chart 
+				li:last-child
+					display: none
+		.rowInfo 
+			.statwrap 
+				margin-left: 60px
+				.status 
+					span
+						display: none
+				.status:first-child:after
+					float: right
+					height: 18px
+	.myTable.MAP 
+		.table_id 
+			thead
+				th:nth-child(1)
+					width: 260px
+				th:nth-child(2)
+					width: 195px
+	.myTable.table11 
+		.dataTables_wrapper 
+			.dataTables_filter 
+				input
+					width: 144px
+	.myTable.table11_2 
+		.table_id
+		.table_id					
+			tbody 
+				tr
+					td:nth-child(2)
+						padding-left: 15px
+		.dataTables_wrapper 
+			.dataTables_filter 
+				left: 79px
+				input
+					width: 124px
+
+	footer 
+		.nav-footer.nav-footer1
+			margin-left: 25px
+		.nav-footer.nav-footer2
+			margin-left: 40px
+		.nav-footer.nav-footer3
+			margin-left: 30px
+	#btnTop
+		display: none
+
+
+
+
+
+	.landingPage header .nav-menu li
+		margin-left: 18px
+	.lapndingPage header .btncontact 
+		width: 125px
+	
+	
+
+// ≥992px
++media-breakpoint-down(md)
+	.BlockTop
+		display: none
+	.myTable .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody tbody 
+		tr.TableTop
+			position: relative
+			&.TOP_uniq_10
+				td:last-child::after
+					content: 'TOP 10 Банков России'
+					position: absolute
+					visibility: visible
+					left: 0
+					width: 100%  
+					font-size: 11px
+					font-weight: 500
+					line-height: 30px
+					height: 30px
+					padding-left: 84px
+					margin-top: 52px
+					color: $cornflower-blue
+					background-color: rgba($cornflower-blue, .1)
+			&.TOP_uniq_50
+				td:last-child::after
+					content: 'TOP 50 Банков России'
+					position: absolute
+					visibility: visible
+					left: 0
+					width: 100%  
+					font-size: 11px
+					font-weight: 500
+					line-height: 30px
+					height: 30px
+					padding-left: 84px
+					margin-top: 52px
+					color: $cornflower-blue
+					background-color: rgba($cornflower-blue, .1)
+			&.TOP_uniq_100
+				td:last-child::after
+					content: 'TOP 100 Банков России'
+					position: absolute
+					visibility: visible
+					left: 0
+					width: 100%  
+					font-size: 11px
+					font-weight: 500
+					line-height: 30px
+					height: 30px
+					padding-left: 84px
+					margin-top: 52px
+					color: $cornflower-blue
+					background-color: rgba($cornflower-blue, .1)
+			td
+				padding-bottom: 52px
+			&::after
+				
+
+	.myTable .dataTables_wrapper .dataTables_scroll
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			right: 0
+			height: 100%
+			width: 20%
+			z-index: 2
+			border-radius: 0 0 8px 0
+			background-image: linear-gradient(to left, $white, rgba(255, 255, 255, 0.16))
+	.myTable .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody.active
+		z-index: 3
+
+	.select2-container--default 
+		.dropdown-select-for-city
+			left: -190px
+			width: 230px!important
+			height: 267px
+			padding: 12px 14px 14px 14px
+			overflow: hidden
+
+			.select2-search--dropdown 
+				.titleCity
+					font-size: 12px
+					margin-bottom: 9px
+					color: $charcoal-grey
+				.select2-search__field
+					width: 200px
+			.select2-results>.select2-results__options
+				max-height: 150px
+	hr.lineGrad
+		margin-top: 16px
+	hr.lineFull
+		margin-top: 18px
+	header 
+		.bg_head
+			display: none
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(56, 66, 84, 0.64)
+			z-index: 1
+			&.active
+				display: block
+		.header
+			height: 60px
+		.timeMob,	.logoMob
+			display: block	
+		.timeMob,
+			text-align: left
+			margin-left: 35px
+			.lineGrad
+				margin-top: 22px
+				margin-bottom: 27px
+		.heade-right
+			margin-top: 13px
+		.logo
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			margin-top: 15px
+		.logoMob
+			position: relative
+			margin-left: 35px
+			margin-top: 18px
+			margin-bottom: 28px
+			transform: none
+			left: 0
+		.local 
+			img
+				margin-right: 0	
+			b
+				display: none
+			.select2-container--default
+				width: 22px!important
+				.select2-selection--single
+					width: 22px!important
+		.openMenu, .closeMenu
+			display: inline-block
+			background: none
+			border: none
+			cursor: pointer
+			outline: none
+
+		.openMenu
+			color: $cloudy-blue
+			font-size: 22px
+			margin-top: 13px
+			padding: 0
+
+		.nav-menu
+			position: fixed
+			background: #fff
+			top: 0
+			left: -100%
+			width: 78%
+			height: 100%
+			transition: all .3s
+			opacity: 0
+			z-index: 10000
+			&.active
+				left: 0
+				z-index: 8888
+				opacity: 1	
+
+			li
+				display: block
+				margin-top: 17px
+				&.active:before
+					display: none
+			.closeMenu
+				position: absolute
+				top: 87px
+				right: -22%
+				font-size: 30px
+				color: #fff
+
+				.fa-remove:before, .fa-close:before, .fa-times:before
+					content: '\2716'
+
+	.description-page 
+		h2
+			font-size: 16px
+		p
+			font-size: 14px
+			margin-bottom: 0
+	.description-page-top
+		margin-bottom: 15px
+	.section 
+
+		h3
+			font-size: 16px
+		.selectBox
+			float: inherit
+			display: block
+			width: 100%
+			margin-top: 15px
+			margin-bottom: 15px
+			padding-top: 7px
+		.title-wrap
+			padding: 20px
+			padding-top: 15px
+			padding-bottom: 0
+			margin-bottom: 15px
+		.blockBOX 
+			.content
+				padding: 20px 20px
+				padding-top: 15px
+				.dynamicsCourse.box1
+					margin-top: 16px
+				.dynamicsCourse 
+					.selectBox
+						top: 0
+						width: 100%
+				.exchangeBox 
+					.rowInfo 
+						.rectInput 
+							min-width: 380px
+							input
+								min-width: 345px
+					.rowInfo.sell
+						margin-bottom: 18px
+					.link
+						margin-bottom: 27px
+		.wrapperBank
+			padding-top: 19px
+			p, a
+				font-size: 14px
+			p
+				margin-bottom: 16px
+			.lineGrad
+				display: block
+				margin: 18px 0
+		&.bank 
+			.descr-wrap2
+				margin-left: 0
+			.descr-wrap3
+				margin-left: 0
+	.myTable.courseBank.section
+		.head
+			padding: 15px 29px
+			padding-bottom: 0
+			margin-bottom: 13px
+	.section
+		.exchange .select2-container--default
+			margin-top: 0
+		.blockBOX .boxConvert 	
+			.box2
+				padding-top: 28px
+		.blockBOX	.refreshBtn
+			top: 105px
+		.blockBOX 
+			.courseBox
+				text-align: center
+				margin: 0
+				.boxInfo:last-child
+					margin-top: 5px
+				.head > img
+					width: 26px
+					margin-right: 12px
+				.info	
+					white-space: nowrap		
+				.dynamicsCourse 
+					.selectBox
+						margin-bottom: 9px
+					h3			
+						margin-bottom: 15px
+					p
+						margin-bottom: 15px
+				.boxConvert 
+					hr.lineGrad
+						margin-top: 23px
+					.rate
+						margin-top: 6px
+						margin-bottom: 5px
+
+	.exchangeBank 
+		.rowInfo 
+			.price
+				float: inherit
+				margin-left: 37px
+		.profitableInfo
+			margin-bottom: 20px
+	.courseBox.courseBoxMini
+		width: 100%	
+		text-align: center
+		margin: 0
+		.courseBoxMiniWrap
+			display: block
+			width: 380px
+			margin: 0 auto
+			.boxInfo
+				float: inherit	
+				&.active
+					margin: 0 28px	
+					padding: 15px 13px
+				&:nth-child(2)
+					float: left
+					margin-top: 0px
+				&:nth-child(3)
+					vertical-align: top
+					margin-top: 0px
+	.select2-container--default 
+		.select2-selection--single 
+			height: 15px
+			.select2-selection__rendered	
+				font-size: 16px			
+	.chart-m, .chart-lg
+		font-size: 11px
+	.chart-m
+		width: auto
+	.page .block .dynamicsCourse .chart-m
+		margin-left: -20px
+		margin-right: -20px
+	.chart 
+		.nav-chart 
+			li
+				width: 14%
+				padding: 0
+				text-align: center
+		.chart-header
+			padding: 20px
+			padding-bottom: 0
+		hr.lineFull
+			margin-top: 0
+	.myTable 	
+		&.section 
+			.head
+				padding: 20px 20px
+				padding-bottom: 0
+				margin-bottom: 20px
+
+	.myTable, .myTable.tableCB, .myTable.table6, .myTable.table7, .myTable.table11 
+		.dataTables_wrapper 
+			.dataTables_filter
+				position: relative
+				top: 0
+				right: inherit
+				left: inherit
+				width: 100%
+				label
+					display: inline-block
+					width: 100%
+					float: left
+					text-align: center
+					padding-bottom: 18px
+					padding-left: 20px
+					padding-right: 20px
+					
+				input
+					width: 100%
+					margin: 0 auto
+					font-size: 14px
+	.myTable.tableCB 
+		.table_id 
+			thead
+				background: #fff
+		.selectBox
+			margin-bottom: 0
+		.dataTables_wrapper.no-footer 
+			div.dataTables_scrollHead 
+				table.dataTable 
+					thead 
+						.usa:before, .eur:before
+							background: #fff
+		.dataTables_wrapper 
+			.dataTables_filter
+				label
+					padding-bottom: 18px
+					padding-top: 18px
+					background: $pale-grey
+					margin-bottom: 0
+	.myTable.MAP 
+		.dataTables_wrapper 
+			.dataTables_filter
+				top: 0
+
+
+		
+	.myTable.table11 
+		.dataTables_wrapper.no-footer 
+			div.dataTables_scrollHead 
+				.table_id_12 
+					thead 	
+						.container-select-for-month
+							width: 135px
+	.myTable.table11 
+		.table_id 
+			thead
+				background: #fff
+		.dataTables_wrapper 
+			.dataTables_filter
+				label
+					padding-bottom: 18px
+					padding-top: 18px
+					background: $pale-grey
+					margin-bottom: 0
+		.dataTables_wrapper.no-footer 
+			div.dataTables_scrollHead 
+				.table_id_12 
+					thead 
+						.container-select-for-month
+							border: 1px solid  rgba(222, 225, 230, 0.81)
+	.section .selectBox .valueTag
+		font-size: 14px
+	.select2-container--default 
+		.dropdown-select-for-month
+			min-width: 250px !important
+			max-width: 680px !important
+		.dropdown-select-for-month.select2-dropdown--below
+			top: 0px
+		.dropdown-select-for-month.select2-dropdown--above
+			top: -10px
+
+
+	.myTable.table11 
+		.dataTables_wrapper.no-footer div.dataTables_scrollHead 
+			.table_id_12 
+				thead 
+					.mob, span
+						display: block
+						color: #8992a1
+						font-size: 14px
+						line-height: 1.2
+					.select2-container--default
+						display: none
+		.head
+			margin-bottom: 5px
+		.selectBox
+			margin-bottom: 10px
+			height: 38px
+			padding-top: 10px
+			.selectMenuBox
+				top: 45px
+			.fa-angle-down
+				top: 12px
+		.table_id 
+			tbody 
+				tr 
+					td:nth-child(2)
+						padding-left: 14px
+		.select2-container--default 
+			width: 100% !important
+			.container-select-for-month
+				display: block
+				border: 1px solid rgba(222, 225, 230, 0.81)
+				padding: 11px 8px 0 11px
+				height: 38px
+				margin-bottom: 10px
+			.select2-selection--single 
+				.select2-selection__rendered
+					line-height: 13px
+					font-size: 14px
+	.myTable.table11_2 
+		.table_id 
+			thead 
+				th:nth-child(1)
+					padding-left: 30px
+				th
+					padding-left: 30px
+					padding-top: 16px
+					padding-bottom: 16px
+			tbody tr span
+				display: none
+			tbody
+				tr 
+					td:nth-child(1)
+						padding-left: 30px
+					td:nth-child(2)
+						padding-left: 57px
+					td:nth-child(5)
+						padding-left: 45px						
+					td:nth-child(6)
+						padding-left: 40px
+					td
+						padding-left: 53px
+	.myTable.table6, .myTable.table7
+		.selectBox
+			margin-bottom: 0
+			max-width: 100%
+		.table_id 
+			thead
+				background: #fff
+		.dataTables_wrapper 
+			.dataTables_filter 
+				label
+					padding-bottom: 18px
+					padding-top: 18px
+					background: $pale-grey
+					margin-bottom: 0
+				
+	.infoPage 
+		.wrapperSlider 
+			.nav-slider
+				margin-top: 0
+				margin: 20px
+				li
+					width: 79px
+
+	footer
+		padding: 30px 0
+		.logo
+			margin-bottom: 20px
+		.copyright
+			margin-bottom: 15px
+		.socialLink 
+			.socials
+				margin-bottom: 22px
+		.nav-footer
+			margin-bottom: 38px
+			li
+				margin-bottom: 10px
+			li:last-child
+				margin-bottom: 0
+			&.nav-footer1, &.nav-footer2, &.nav-footer3
+				margin-left: 0
+			&.nav-footer3
+				margin-bottom: 5px
+
+
+	
+
+	.landingPage header .btncontact
+		float: none
+		position: absolute
+		top: -10px
+		left: 50%	
+		transform: translateX(-50%)
+	.landingPage .blockBOX
+		margin-right: 0
+		margin-bottom: 120px
+	.landingPage .sectionINFO .widget3
+		left: -100%
+	.landingPage .contact .contactPop
+		width: 350px
+		.send
+			display: inline-block
+			transform: none
+			margin: 0 auto
+
+// ≥768px
++media-breakpoint-down(sm)
+	.container
+		padding-right: 15px
+		padding-left: 15px
+	.modal-dialog
+		max-width: 95%
+	#mapPop .modal-dialog
+		max-width: 95%
+	.select2-container--default .dropdown-select-for-city
+		left: -212px
+	.select2-container--default .container-select-for-city-mini .select2-selection__rendered
+		line-height: 12px
+	.page 
+		.selectBox
+			padding-top: 7px
+			margin-bottom: 15px
+	
+	.section 
+		h3
+			line-height: 1.2
+			margin-bottom: 0
+		.hide
+				display: none
+		&.bank
+			.title-wrap 
+				.head-title
+					padding-left: 38px
+				img
+					position: absolute
+			.btnOpen
+				border-radius: 6px
+				background-color: #f1f2f4
+				color: #999fab
+				border: none
+
+		.btnOpen
+			top: 0
+			display: inline-block
+			float: inherit
+			width: 100%
+			margin-top: 14px
+
+		.myTable .showMore
+			width: 90%
+		.blockBOX 
+			.iconBlock
+				display: none
+			.content 
+				.exchangeBox 
+					.hide
+						display: none
+					.link
+						text-align: center
+					.head 
+						margin-bottom: 0
+						h3
+							white-space: normal
+					.rowInfo 
+						.info
+							font-size: 13px
+						.rectInput
+							margin: 0
+							margin-left: 0
+							margin-bottom: 12px
+							margin-top: 12px
+							min-width: 84%
+							input
+								min-width: 90%
+								max-width: 149px
+							.sign 
+								width: 10%
+					.rowInfo.sell 
+						.rectInput
+							margin: 0
+							margin-left: 10px
+							margin-top: 12px
+							margin-bottom: 12px
+		.wrapperBank
+			margin: 0 20px
+			p, a 
+				.boxValue
+					right: 0
+
+		.profitableInfo
+			position: relative
+			margin-top: 11px
+			padding-left: 25px
+			margin-bottom: 20px
+			img
+				position: absolute
+				top: 0
+				left: 0
+		.exchange 
+			margin: 0 20px
+			margin-top: 10px
+			.select2-container--default
+				margin: 0
+				float: inherit
+				width: 100%!important
+			.select2-selection--single 
+				.select2-selection__arrow	
+					float: right
+			.selectBox
+				display: block
+				width: 100%
+				float: left
+				margin-right: 0
+				margin-bottom: 42px
+				.fa
+					float: right
+					top: 12px
+			.wrapRange
+				display: block
+				float: left
+				margin-bottom: 24px
+				width: 100%
+				.value-range
+					margin-bottom: 6px
+				.noUi-target
+					width: 100%
+			.currencyChoise
+				display: block
+				margin: 0
+				float: left
+				.valueTag 
+					span
+						padding-top: 4px
+				img
+					width: 26px
+	
+		.blockBOX 
+			.exchangeBank 
+				padding-top: 15px
+				.rowInfo 
+					.info
+						font-size: 16px
+					.price
+						font-size: 16px
+						margin-left: 10px
+						margin-right: 0
+						float: inherit
+					.rectInput
+						width: 140px
+						margin: 0
+						margin-top: 20px
+						input
+							min-width: 108px
+	.myTable.table11 .downloadXls
+		display: none
+	.myTable.section 
+		.head
+			padding-bottom: 0
+	.myTable.courseBank 
+		.link
+			display: none
+		.btnGroup
+			li
+				padding: 11px 0
+				img
+					display: none
+	.chart 
+		.chart-wr 
+			margin: 0
+			.rowInfo 
+				margin-left: 20px
+				.statwrap
+					margin-left: 0
+		.nav-chart 
+			text-align: center
+			margin-left: 10px
+			margin-right: 10px
+			br
+				display: block
+			li	
+				height: 28px
+				margin: 0 5px
+				margin-bottom: 10px
+				&.active
+					margin-left: 3px
+	.wrapperForChart 
+		.chart-wr 
+			.nav-chart
+				li:last-child
+					display: none
+		.infoDelay
+			padding-left: 20px
+			img
+				margin-left: -24px
+
+	.infoPage 
+		.section2 
+			.text
+				margin: 15px 20px
+				h3
+					margin-bottom: 5px	
+		.tableInfo 
+			.first-part
+				width: 100%
+				.tableTd:last-child
+					padding-left: 0
+			.second-part
+				width: 100%
+				.tableTd:last-child
+					padding-left: 0
+		.wrapperSlider 
+			margin-bottom: 0
+			.btnTurn
+				width: 170px
+				margin-left: -85px
+				position: relative
+				bottom: 1px
+				margin-bottom: 20px
+			.owl-theme 
+				.owl-nav
+					top: inherit
+					bottom: -15px
+					left: 0
+					button.owl-prev
+						left: 15px
+					button.owl-next
+						right: 15px
+			.nav-slider 
+				margin: 15px	
+				text-align: center
+				margin-bottom: 5px
+				li
+					width: 32%
+					margin: 0 
+					margin-bottom: 10px
+					&:first-child
+						margin-left: 0
+				li:last-child
+					width: 98%
+			.slider 
+				padding-right: 20px
+				padding-left: 20px
+				margin-bottom: 20px
+				.item
+					width: auto
+					height: 123px
+					padding-top: 20px
+					.flip-container 
+						width: 196px
+						height: 123px
+						.front, .back
+							width: 196px
+							height: 83px
+						.btnTurn
+							bottom: 0
+	.popuprequisites
+		width: 100%
+		height: auto
+		padding: 20px
+		.closePopup
+			top: 25px
+			right: 35px
+		.blockrequisites tr td
+			padding-right: 15px
+			vertical-align: top
+	.contactPop
+		width: 100%
+		height: auto
+		padding: 20px
+	.popupRequest
+		width: 100%
+		height: auto
+		padding: 20px
+		h4
+			font-size: 14px
+			padding-right: 45px
+		.wrapBtn 
+			.ChoisePop
+				width: 100%
+			.ChoisePop:last-child
+				float: inherit
+				margin-top: 15px
+		.wrapRange
+		 	.rect1
+		 		display: none
+		 	.rect2
+		 		top: -66px
+		 	.rectinfo
+		 		left: 0
+		 	.value-range
+		 		left: 0
+		 	.noUi-horizontal
+		 		width: 100%
+		 		margin-left: 0
+		.form 
+			.send
+				float: left
+				width: 100%
+				margin-top: 15px
+	footer
+		.copyright, p
+			font-size: 13px
+		.nav-footer
+			li 
+				a
+					font-size: 13px
+					white-space: nowrap
+			li:first-child
+				font-size: 16px	
+				
+		.wrap-b
+			p
+				font-size: 13px
+	
+	.landingPage .textContent h1
+		font-size: 27px
+	.landingPage .textContent
+		margin-top: 60px
+	.landingPage .textContent .lookCourse
+		margin-bottom: 125px
+	.landingPage .sectionINFO .widget3
+		display: none
+	.landingPage .contact
+		margin-top: 200px
+	.landingPage .contact .contactPop
+		width: 90%
+
+@media only screen and (max-width: 456px)
+	.section 
+		.blockBOX 
+			.exchangeBox 
+				.rowInfo 
+					.rectInput
+						min-width: 78%
+						input
+							min-width: 80%
+						.sign 
+							width: 20%
+			.courseBox 
+				.boxInfo.active	
+					margin: 0
+					float: left
+					padding: 28px 13px
+					margin-right: 25px
+					.oneUnit
+						display: block
+						margin-bottom: 10px
+				.boxInfo
+					.oneUnit
+						display: none
+		.blockBOX 
+			.courseBox
+				.courseBoxMiniWrap
+					width: 250px
+					display: inline-block
+
+			.courseBoxMini
+				width: 100%	
+				text-align: center
+				margin: 0
+				.courseBoxMiniWrap
+					display: inline-block
+					width: 250px
+					.boxInfo
+						float: left	
+						&.active
+							margin: 0
+							padding: 28px 13px
+							margin-right: 15px
+						&:nth-child(2)
+							margin-top: 0px
+						&:nth-child(3)
+							vertical-align: middle
+							margin-top: 0px
+
+// ≥576px
++media-breakpoint-down(xs)
+	
+	.infoPage 
+		.wrapperSlider
+			.slider
+			.nav-slider 
+				li
+					width: 30%	
+					margin: 0 3px
+					margin-bottom: 10px
+				li.active
+					margin-left: 3px
+	.chart 
+		.nav-chart 
+			margin-left: 20px
+			margin-right: 20px
+			li
+				margin: 0 0px
+				margin-bottom: 10px
+				width: 32%
+			li.active
+				margin-left: 0
+		
+	.landingPage .sectionINFO .widget1, .landingPage .sectionINFO .widget2
+		display: none
+	.landingPage .section3
+		margin-top: 50px
+	.landingPage header .btncontact
+		right: 50px
+		transform: none
+		left: auto
+	.landingPage .contact .contactPop
+		width: 100%
+	.landingPage h2
+		font-size: 24px

@@ -1,0 +1,361 @@
+
+
+
+
+
+.landingPage
+	.main
+		overflow: hidden
+		background: #fff
+	header
+		width: 100%
+		position: relative
+		background: url('../img/landing/fon-header.png') no-repeat center top, #fff
+		overflow: hidden
+
+	.wrapper-header
+		.fon-i
+			position: absolute
+			top: 433px
+			left: 52%
+			transform: translateX(-50%)
+			border-radius: 8px
+	.line-bottom
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 0
+		svg:not(:root)
+			overflow: visible
+
+
+
+	h2
+		font-family: $font
+		font-size: 31px
+		font-weight: 500
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.16
+		letter-spacing: normal
+		color: $charcoal-grey
+		margin-bottom: 19px
+	.section
+		h3
+			font-family: $font
+			font-size: 20px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $cornflower-blue
+
+	header
+		position: relative
+		width: 100%
+		border-bottom: none
+		&::before
+			display: none
+		.nav-menu.active
+			li
+				a
+					color: $text
+				&.active
+					a
+						color: $cornflower-blue
+		.openMenu
+			color: #fff
+		.closeMenu
+			color: $cornflower-blue
+		.header
+			.logo-stat
+				display: inline-block
+			.logo-fix
+				display: none
+		.header.fix
+			position: fixed
+			width: 100%
+			background: #fff
+			z-index: 999
+			top: -50%
+			transition: all .5s
+			&.active
+				opacity: 1
+				top: 0
+				box-shadow: 0 0 20px 0 rgba(56, 66, 84, 0.09)
+			.logo, .nav-menu a 
+				color: $text
+			.logo-stat
+				display: none
+			.logo-fix
+				display: inline-block
+			.btncontact
+				background-color: transparent
+				border: 1px solid $cornflower-blue
+				color: $cornflower-blue
+			.openMenu, .closeMenu
+				color: $cornflower-blue
+		.header
+			.logo, .nav-menu a 
+				color: #fff
+			.nav-menu
+				margin-left: 123px
+				li
+					margin: 0 20px
+					a
+						font-family: $font
+						opacity: 1
+		.btncontact
+			width: 130px
+			height: 36px
+			line-height: 36px
+			float: right
+			border: none
+			cursor: pointer
+			margin-top: 24px
+			background-color: transparent
+			border: 1px solid #fff
+			font-family: $font
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			letter-spacing: normal
+			text-align: center
+			border-radius: 4px
+			color: #fff
+			text-decoration: none
+
+	.textContent
+		margin-top: 70px
+		text-align: center
+		h1
+			font-family: $font
+			font-size: 36px
+			font-weight: 500
+			text-align: center
+			color: #ffffff
+			margin-bottom: 4px
+		.date
+			font-family: $font
+			font-size: 21px
+			text-align: center
+			color: #ffffff
+		.lookCourse
+			display: block
+			width: 218px
+			margin: 0 auto
+			height: 50px
+			margin-top: 45px
+			margin-bottom: 194px
+			border-radius: 6px
+			background-color: #324bb1
+			font-family: $font
+			font-size: 14px
+			text-align: center
+			color: #ffffff
+			border: none
+
+
+	.blockBOX
+		margin-right: 30px
+		box-shadow: 0 23px 50px 0 rgba(48, 57, 74, 0.1)
+		margin-bottom: 235px
+		height: auto
+		z-index: 1
+		&:after
+			display: none
+		.head
+			h3
+				display: inline-block
+				margin: 0
+				font-size: 16px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $charcoal-grey
+				margin-bottom: 7px
+			.info
+				display: block
+				font-size: 12px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: #959ba5
+				//margin-bottom: 28px
+				.date
+					position: relative
+					color: #787f8b
+					font-weight: 500
+					padding-right: 5px
+				.time
+					color: #8a919d
+					font-weight: 500
+		.box
+			position: relative
+		.box1
+			margin-top: 25px
+		.box2
+			padding-top: 20px
+		.resultConvert
+			font-size: 30px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			color: $charcoal-grey
+		.boxConvert	
+			position: relative
+			.rate
+				display: block
+				font-size: 13px
+				font-weight: 300
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				color: $cloudy-blue
+				margin-top: 18px
+				margin-bottom: 12px
+
+		.refreshBtn
+			position: absolute
+			top: 112px
+			right: -6px
+			background: none
+			width: 45px
+			height: 45px
+			border: none
+			outline: none
+			border-radius: 50%
+			box-shadow: 0 20px 20px 0 rgba(49, 57, 67, 0.04)
+			background-color: $cornflower-blue
+			cursor: pointer
+			line-height: 0
+			&:hover img
+				animation: spin 4s linear infinite
+			@keyframes spin 
+				100% 
+					transform: rotate(360deg)
+
+
+	.sectionINFO
+		position: relative
+		&.zindex
+			z-index: 2
+		.sectionINFO-wrap
+			margin-left: 21px
+		img
+			box-shadow: 0 40px 90px 0 rgba(48, 57, 74, 0.1)
+			border-radius: 8px
+		p
+			font-family: $font
+			font-size: 14px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: 1.86
+			letter-spacing: normal
+			color: $charcoal-grey
+		.widget1
+			position: relative
+			text-align: center
+			margin-top: 31px
+			margin-left: -40px
+			z-index: 2
+		.widget2
+			position: absolute
+			z-index: 1
+			right: -115px
+			top: 198px
+		.widget3-fon
+			box-shadow: none
+			position: absolute
+			top: -424px
+			left: -618px
+		.widget3
+			position: absolute
+			z-index: 1
+			top: 0
+			left: -460px
+
+		.box
+			position: relative
+			margin-top: 50px
+			padding-left: 94px
+			&.box2
+				margin-top: 38px
+			h3
+				margin-top: 25px
+				margin-bottom: 12px
+			.fa
+				position: absolute
+				top: 0
+				left: 0
+				font-size: 20px
+				color: $cornflower-blue
+				width: 70px
+				height: 70px
+				border-radius: 50%	
+				text-align: center
+				line-height: 70px
+				background-color: rgba($cornflower-blue, 0.1)
+	
+	.section3
+		margin-top: 294px
+
+	.contact
+		margin-top: 460px
+		background: url('../img/landing/fon-footer.png') no-repeat center
+		.contactPop
+			width: auto
+			padding: 0
+			margin: 0 auto
+			position: relative
+			text-align: center
+			opacity: 1
+			top: -82px
+			left: auto
+			z-index: 0
+			transform: none
+			box-shadow: 0 0 90px 0 rgba(48, 57, 74, 0.1)
+			border-radius: 15px
+			.contactPop-head
+				padding: 25px 25px 0 25px
+			.contactPop-content
+				padding: 43px 39px 30px 39px
+			input
+				margin-bottom: 5px
+			label 
+				padding-bottom: 5px
+				p
+					margin-bottom: 5px
+			.selectBox .fa-angle-down
+				font-size: 17px
+				top: 0
+				right: 0
+			.textWrap 
+				textarea
+					min-height: 60px
+				.sessionNum_count
+					bottom: 13px
+					right: 8px
+			.send
+				margin-top: 44px
+			h2
+				font-size: 26px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: 1.38
+				letter-spacing: normal
+				text-align: center
+				color: #313943
+

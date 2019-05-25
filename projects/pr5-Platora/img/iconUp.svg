@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>direction-up</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Development" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(-1334.000000, -1920.000000)" fill="#FFFFFF">
+            <g id="Btn---TOP" transform="translate(1319.000000, 1906.000000)">
+                <g id="direction-up" transform="translate(15.000000, 14.000000)">
+                    <path d="M12.7272727,20.1666667 L7.27272727,20.1666667 C6.72727273,20.1666667 6.36363636,20.5333333 6.36363636,21.0833333 C6.36363636,21.6333333 6.72727273,22 7.27272727,22 L12.7272727,22 C13.2727273,22 13.6363636,21.6333333 13.6363636,21.0833333 C13.6363636,20.5333333 13.2727273,20.1666667 12.7272727,20.1666667 Z" id="Path"></path>
+                    <path d="M10,0.366666667 L0.818181818,11.9166667 L6.36363636,11.9166667 L6.36363636,17.4166667 C6.36363636,17.9666667 6.72727273,18.3333333 7.27272727,18.3333333 L12.7272727,18.3333333 C13.2727273,18.3333333 13.6363636,17.9666667 13.6363636,17.4166667 L13.6363636,11.9166667 L19.1818182,11.9166667 L10,0.366666667 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

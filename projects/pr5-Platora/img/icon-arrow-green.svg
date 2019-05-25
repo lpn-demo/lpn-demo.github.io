@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>shape-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Development" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Page-1" transform="translate(-925.000000, -324.000000)" stroke="#5AB56F" stroke-width="2">
+            <g id="Group---Forex" transform="translate(617.000000, 167.000000)">
+                <g id="Drop---Graf" transform="translate(31.000000, 153.000000)">
+                    <g id="Drop---Text">
+                        <g id="Group-4" transform="translate(278.000000, 0.000000)">
+                            <g id="shape-arrow" transform="translate(0.000000, 5.000000)">
+                                <path d="M0,10 L10,0" id="Path"></path>
+                                <polyline id="Path" points="5 0 10 0 10 5"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
