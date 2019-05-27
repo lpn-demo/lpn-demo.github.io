@@ -1,0 +1,82 @@
+/*==========  Desktop First  ==========*/
+@media (max-width: 991.98px) {
+  .monitor .monitorContent h1 {
+    margin-top: 15%;
+    font-size: 35px;
+  }
+  .section {
+    padding: 20px 0;
+  }
+  .section .titleSection {
+    font-size: 28px;
+  }
+  .notebook-wrap .myPhoto {
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 300px;
+  }
+  .notebook {
+    margin-top: 25px;
+  }
+  .notebook .pg .text {
+    padding: 15px;
+  }
+  .notebook .pg .text h3 {
+    font-size: 25px;
+  }
+  .notebook .pg .text p {
+    font-size: 18px;
+  }
+  .notebook .pg .text ul {
+    font-size: 18px;
+  }
+  #flipbook {
+    width: 600px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header .row {
+    min-height: 500px;
+    height: auto;
+  }
+  .monitor .arrow .chevron {
+    width: 20px;
+    height: 2px;
+  }
+  .monitor .monitorContent h1 {
+    margin-top: 20%;
+    font-size: 20px;
+  }
+  .section .titleSection {
+    font-size: 20px;
+  }
+  #flipbook {
+    width: 500px;
+    height: 400px;
+  }
+  .notebook {
+    margin-top: 15px;
+  }
+  .notebook .pg .text {
+    padding: 10px;
+  }
+  .notebook .pg .text h3 {
+    font-size: 20px;
+  }
+  .notebook .pg .text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .notebook .pg .text ul {
+    font-size: 16px;
+  }
+  .contactContent {
+    margin-top: 15px;
+  }
+  .mob-wrap {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,485 @@
+@import "vars"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #ccc
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 520px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $text
+	font-family: 'Old Standard TT', serif
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+.accent
+	color: $accent
+.greeting
+	width: 100%
+	height: 100%
+	position: fixed	
+	color: #000
+	z-index: 5
+	font-size: 40px
+	background: rgba(#0f0f0f, .2)
+	.text
+		position: absolute
+		top: -50%	
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: all 1s
+		&.active
+			top: 20%	
+	
+		
+.preloader
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 10
+	background: #0f0f0f
+	.text
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		&:after
+			position: absolute
+			top: 50px
+			left: 25px
+			content: ''
+			width: 60px
+			height: 60px
+			background: url('../img/arrow.png') no-repeat center
+			background-size: contain
+		h1
+			color: #fff
+			text-align: right
+			margin-right: -50%
+
+	.switch
+		position: relative
+		display: inline-block
+		margin-top: 50%
+		margin-left: -50%
+		width: 150px
+		height: 65px
+		input
+			opacity: 0
+			width: 0
+			height: 0
+			&:focus
+				& + .slider
+					box-shadow: 0 0 1px #2196F3
+			&:checked
+				& + .slider
+					background-color: #2196F3
+					&:before
+						transform: translateX(83px)
+		.slider
+			position: absolute
+			cursor: pointer
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: #ccc
+			-webkit-transition: .4s
+			transition: .4s
+			&.round
+				border-radius: 34px
+				&:before
+					border-radius: 50%
+			&:before
+				position: absolute
+				content: ""
+				height: 60px
+				width: 60px
+				left: 4px
+				bottom: 3px
+				background-color: white
+				transition: .4s
+
+
+.header
+	position: relative
+	background: url('../img/fon1.jpg') no-repeat center
+	background-size: cover
+	.row
+		height: 100vh
+		min-height: 700px
+.nav
+	width: 100%
+	height: 40px
+	background: linear-gradient(to right, transparent, rgba(#fff, .8))
+	background: 
+	position: absolute
+	top: 0
+	list-style: none
+	margin: 0
+	padding: 0
+	padding-top: 5px
+	padding-right: 35px
+	text-align: right
+	z-index: 5
+	li
+		display: inline-block
+		margin: 0 15px
+		font-size: 18px
+		a
+			color: #000
+			&:hover
+				color: $accent
+
+.monitor
+	position: relative
+	width: 100%
+	margin-left: 3%
+	z-index: 2
+	.monitorContent
+		position: absolute
+		top: 3%
+		left: 2%
+		height: 67%
+		width: 96%
+		background: url('../img/screen.png') no-repeat center top
+		background-size: cover
+		color: #fff
+		text-align: center
+		h1
+			margin-top: 20%
+			font-size: 45px
+			line-height: 1.2
+			span
+				font-size: 25px
+			.accent
+				color: #2f94d2
+
+	.arrow
+		position: absolute
+		width: 24px
+		height: 24px
+		bottom: 25%
+		left: 50%
+		transform: translateX(-50%)
+		.chevron 
+			position: absolute
+			width: 28px
+			height: 5px
+			opacity: 0
+			transform: scale3d(0.5, 0.5, 0.5)
+			animation: move 3s ease-out infinite
+		.chevron:first-child 
+			animation: move 3s ease-out 1s infinite
+		.chevron:nth-child(2) 
+			animation: move 3s ease-out 2s infinite
+		.chevron:before,
+		.chevron:after 
+			content: ' '
+			position: absolute
+			top: 0
+			height: 100%
+			width: 51%
+			background: $accent
+		.chevron:before 
+			left: 0
+			transform: skew(0deg, 30deg)
+		.chevron:after 
+			right: 0
+			width: 50%
+			transform: skew(0deg, -30deg)
+			@keyframes move 
+				25% 
+					opacity: 1
+				33% 
+					opacity: 1
+					transform: translateY(30px)
+				67% 
+					opacity: 1
+					transform: translateY(40px)
+				100% 
+					opacity: 0
+					transform: translateY(55px) scale3d(0.5, 0.5, 0.5)
+			@keyframes pulse 
+				to 
+					opacity: 1
+
+
+
+.section
+	position: relative
+	padding: 40px 0
+	
+	.titleSection
+		position: relative
+		padding-right: 1%
+		font-size: 3rem
+		color: #57646c
+
+
+.portfolio	
+	background: linear-gradient(to right, #f4f2f3, #e7e7e8)
+	.portfolio-wrap
+		.item
+			position: relative
+			margin-bottom: 15px
+			.label
+				position: absolute
+				top: 20px
+				right: 0px
+				background: $accent
+				color: #fff
+				font-size: 14px
+				padding: 3px 5px
+				border-radius: 3px 0 0 3px	
+			img
+				border-radius: 8px
+			a
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				text-align: center
+				transition: all 1s
+				border-radius: 8px
+				&:hover
+					background: rgba($accent, .5)
+				&:hover .fa
+					opacity: 1
+				.fa
+					color: #fff
+					font-size: 22px
+					line-height: 150px
+					opacity: 0
+					transition: all 1s
+			.all
+				width: 100%
+				height: 20%
+				padding: 5px
+				color: #fff
+				top: inherit
+				border-radius: 0 0 8px 8px
+				bottom: 0
+				background: rgba($accent, .5)
+			
+
+
+
+#flipbook
+	width: 800px
+	height: 500px
+	z-index: 2
+
+.notebook-wrap
+	position: relative
+	text-align: center
+	.myPhoto
+		position: absolute
+		top: 0
+		left: 10%
+		width: 350px
+		transform: rotate(5deg)
+		.note
+			position: relative
+			transform: rotate(-15deg)
+			margin-right: 50%
+			font-size: 18px
+			color: $accent
+			&:after
+				position: absolute
+				content: ""
+				top: 30px
+				left: 50%
+				width: 50px
+				height: 50px
+				background: url('../img/note/arrow.png') no-repeat
+				background-size: contain
+
+.notebook
+	position: relative
+	display: inline-block
+	font-family: 'Ranga'
+	&:after
+		position: absolute
+		content: ''
+		box-shadow: 11px -2px 27px -11px rgba(0,0,0,0.75)
+		top: 0
+		right: 0
+		width: 50%
+		height: 100%
+		z-index: 0
+	.odd
+		background-color: #e3e1e4
+		background-image: linear-gradient(right, #FFF 95%, #C4C4C4 100%)
+		box-shadow: inset 0 0 5px #000
+	.even
+		background-color: #e3e1e4
+		background-image: linear-gradient(left, #fff 95%, #dadada 100%)
+	.hard
+		background: url('../img/note/fon-book.jpg') no-repeat center top
+		background-size: cover
+		box-shadow: inset 0 0 3px #000
+		.text
+			text-align: left
+			margin-top: 25px
+			margin-left: 25px
+			color: #000
+		&.front
+			p
+				font-size: 18px
+		&.back
+			p
+				width: 80px
+				height: 80px
+				text-align: center
+				padding-top: 17px
+				line-height: 1.1
+				border: 1px solid rgba(#000, .5)
+				background: rgba(#000, .3)
+				border-radius: 50%
+				color: #fff
+				font-size: 17px
+				span
+					font-size: 28px
+					display: block
+					color: $accent
+
+
+
+	.hint
+		font-size: 18px
+		position: absolute
+		right: 25px
+		bottom: 25px
+
+	.pg
+		background: url('../img/note/paper.jpg') no-repeat center top
+		background-size: cover
+		.hint
+			color: $accent
+		.text
+			text-align: left
+			padding: 25px
+			color: #000
+			font-weight: 400
+			h3
+				font-size: 30px
+			p
+				font-size: 22px
+			ul
+				font-size: 21px
+				list-style: none
+				margin-bottom: 0
+				li::before
+					content: "\2022"  
+					color: $accent
+					font-weight: bold 
+					display: inline-block  
+					width: 1em 
+					margin-left: -1em
+					font-size: 24px
+					line-height: 0
+		u
+			color: $accent
+
+
+
+
+.contactContent
+	width: 40%
+	margin: 0 auto
+	margin-top: 15%
+	text-align: center
+	a
+		color: $accent
+		text-decoration: underline
+	.copyMail
+		border-radius: 8px
+		padding: 5px 10px
+		text-align: center
+		cursor: pointer
+		transition: all .2s
+		&:hover
+			background: $accent
+			color: #fff
+	.links
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin: 0 7px
+			font-size: 18px
+			&:hover a
+				color: $accent
+
+
+.mob-wrap
+	margin-top: 20%
+	position: relative
+	width: 180px
+	height: 380px
+	padding-top: 44px
+	background: url('../img/phone.png') no-repeat center
+	transform: rotate(5deg)
+	background-size: cover
+	overflow: hidden
+.mob-float
+	overflow: hidden
+	width: 180px
+	height: 290px
+	padding: 0 10px
+.mob-block
+	background: #000
+	animation: floating 20s ease-in-out infinite
+	animation-delay: 1s
+	z-index: 1
+	font-size: 12px
+	padding: 0
+@keyframes floating 
+	0% 
+		transform: translateY(0)
+
+	50% 
+		transform: translateY(-50%)
+
+	100% 
+		transform: translateY(0)
+
+
+
+
+
+
+
+
+
+
+
