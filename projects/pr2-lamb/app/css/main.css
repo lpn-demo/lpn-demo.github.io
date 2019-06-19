@@ -2,9 +2,6 @@
 ::-webkit-input-placeholder {
   color: #666;
 }
-::-moz-placeholder {
-  color: #666;
-}
 :-ms-input-placeholder {
   color: #666;
 }
@@ -151,8 +148,7 @@ p {
 
 header {
   background: url("../img/bg.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   position: relative;
   -webkit-box-shadow: inset 0px 32px 127px -29px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0px 32px 127px -29px rgba(0, 0, 0, 0.75);
@@ -262,8 +258,7 @@ header .text .btns .light {
 
 .main .section_1 {
   background: url("../img/bg1.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .main .section_1 .img {
@@ -288,8 +283,7 @@ header .text .btns .light {
 
 .main .section_2 {
   background: url("../img/bg2.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .main .section_2 .txt {
@@ -310,8 +304,7 @@ header .text .btns .light {
 
 .main .section_3 {
   background: url("../img/bg3.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   padding-top: 100px;
 }
 
@@ -361,8 +354,7 @@ header .text .btns .light {
 
 .main .section_4 {
   background: url("../img/bg4.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .main .section_4 .txt {
@@ -417,8 +409,7 @@ header .text .btns .light {
 
 .main .section_5 {
   background: url("../img/bg1.png") no-repeat center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   padding: 100px 0;
 }
 
