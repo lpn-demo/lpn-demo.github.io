@@ -684,10 +684,14 @@ b, strong {
 .contactContent .links li {
   display: inline-block;
   margin: 0 7px;
-  font-size: 18px;
 }
 
-.contactContent .links li:hover a {
+.contactContent .links li .fab {
+  font-size: 18px;
+  color: #000;
+}
+
+.contactContent .links li:hover .fab {
   color: #1d5e86;
 }
 
@@ -752,4 +756,106 @@ b, strong {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.startGame {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background: rgba(29, 94, 134, 0.9);
+  outline: none !important;
+  border-color: #1d5e86;
+  cursor: pointer;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  -webkit-animation: zoom 0.7s linear 1s infinite;
+          animation: zoom 0.7s linear 1s infinite;
+}
+
+.startGame:hover {
+  background: #1d5e86;
+}
+
+.startGame .fa {
+  color: #fff;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+  }
+}
+
+.sample {
+  display: none;
+  background: #706f70;
+  height: 100%;
+}
+
+.game {
+  text-align: center;
+}
+
+.endGame {
+  text-align: center;
+  color: #000;
+}
+
+.flip-container {
+  display: inline-block;
+  width: 13%;
+  height: 150px;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  margin: 10px 10px;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipper div {
+  width: 100%;
+  height: 150px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #141214;
+  border: 1px solid #000;
+}
+
+.flipper.active {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flipper .front {
+  z-index: 2;
+}
+
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flipper .fab {
+  z-index: 3;
+  font-size: 5rem;
+  line-height: 1.7;
+  color: #fff;
 }

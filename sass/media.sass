@@ -6,7 +6,10 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
-
+	.flip-container
+		height: 140px
+	.flipper div 
+		height: 140px
 // ≥992px
 +media-breakpoint-down(md)
 	.monitor .monitorContent h1
@@ -35,7 +38,14 @@
 					font-size: 18px
 	#flipbook
 		width: 600px
-	
+	.flip-container
+		height: 100px
+	.flipper 
+		div 
+			height: 100px
+		.fab
+			font-size: 4rem	
+
 
 
 // ≥768px
@@ -75,6 +85,15 @@
 	.mob-wrap
 		margin: 0 auto
 		margin-top: 15px
+
+	.flip-container
+		height: 50px
+		margin: 5px 5px
+	.flipper 
+		div 
+			height: 50px
+		.fab
+			font-size: 2rem	
 // ≥576px
 +media-breakpoint-down(xs)
 
